@@ -2,7 +2,7 @@
 - **Luca Borrelli, matricola 559443**
 - **Rainer Cabral Ilao, matricola 560695**
 
-Descrizione del Progetto
+## Descrizione del Progetto
 Questo progetto ha come obiettivo la creazione di un motore di ricerca per documenti HTML utilizzando Apache Lucene.
 Il motore di ricerca è stato implementato in Java e permette di effettuare ricerche su un insieme di documenti HTML.
 Il progetto è composto da due parti principali:
@@ -24,6 +24,9 @@ motore di ricerca.
 1. Clonare il repository
 2. Importare il progetto in IntelliJ IDEA
 3. Aggiungere le librerie necessarie al progetto
+4. importare all'interno del progetto la cartella "all_htmls" contenente tutti documenti HTML da indicizzare
+
+# NOTA: la durata dell'indicizzazione potrebbe richiedere molti minuti.
 
 ## Utilizzo
 1. Eseguire il progetto

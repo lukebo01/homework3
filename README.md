@@ -7,7 +7,7 @@ Questo progetto ha come obiettivo la creazione di un motore di ricerca per docum
 Il motore di ricerca è stato implementato in Java e permette di effettuare ricerche su un insieme di documenti HTML.
 Il progetto è composto da due parti principali:
 - **Indexer**: si occupa di indicizzare i documenti HTML e di creare un indice invertito.
-- **CustomAnaalyzer**: si occupa di fornire gli analizzatori per ogni campo del documento HTML.
+- **CustomAnalyzer**: si occupa di fornire gli analizzatori per ogni campo del documento HTML.
 - **Server su localhost 8080**: si occupa di effettuare le ricerche sui documenti HTML indicizzati, grazie all'uso di un'interfaccia stile
 motore di ricerca.
 

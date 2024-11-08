@@ -49,6 +49,8 @@ public class DemoApplication {
 		File folder = new File(indexPath);
 		if(!(folder.exists() && folder.isDirectory())){
 			try {
+				// Memorizzo l'istante di inizio dell'indicizzazione
+				long startTime = System.currentTimeMillis();
 				Directory directory = FSDirectory.open(Paths.get(indexPath));
 				Map<String, Analyzer> analyzerPerField = new HashMap<>();
 				analyzerPerField.put("filename", CustomAnalyzers.getSimpleAnalyzer());
@@ -135,6 +137,10 @@ public class DemoApplication {
 				writer.close();
 				directory.close();
 				System.out.println("Indicizzazione completata!");
+				// Calcola il tempo impiegato per l'indicizzazione
+				long endTime = System.currentTimeMillis();
+				long elapsedTime = endTime - startTime;
+				System.out.println("Tempo impiegato per l'indicizzazione: " + elapsedTime + " ms");
 			} catch (IOException e) {
 				throw new RuntimeException(e);
 			}

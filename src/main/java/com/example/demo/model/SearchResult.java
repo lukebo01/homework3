@@ -34,4 +34,13 @@ public class SearchResult {
     public String getContentSnippet() { return contentSnippet; }
     public void setContentSnippet(String contentSnippet) { this.contentSnippet = contentSnippet; }
     public String getBibliographiesSnippet() { return bibliographiesSnippet; }
+
+    @Override
+    public String toString() {
+        return "SearchResult{" +
+                "title='" + title + '\'' +
+                ", abstract='" + abstractText + '\'' +
+                ", author='" + authors + '\'' +
+                '}';
+    }
 }

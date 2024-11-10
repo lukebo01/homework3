@@ -1,0 +1,1022 @@
+(base) PS C:\Users\luca-\OneDrive\Desktop\University\#MAGISTRALE\2° ANNO\1° SEMESTRE\Ingegneria dei Dati\hw2\homework2> mvn test
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< com.example:homework2 >------------------------
+[INFO] Building homework2 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ homework2 ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 2 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ homework2 ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ homework2 ---
+[INFO] skip non existing resourceDirectory C:\Users\luca-\OneDrive\Desktop\University\#MAGISTRALE\2° ANNO\1° SEMESTRE\Ingegneria dei Dati\hw2\homework2\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ homework2 ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 1 source file with javac [debug parameters release 23] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ homework2 ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.example.demo.DemoApplicationTests
+14:55:11.673 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.demo.DemoApplicationTests]: DemoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+14:55:11.775 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.demo.DemoApplication for test class com.example.demo.DemoApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.5)
+
+2024-11-10T14:55:12.165+01:00  INFO 14936 --- [demo] [           main] com.example.demo.DemoApplicationTests    : Starting DemoApplicationTests using Java 23.0.1 with PID 14936 (started by luca- in C:\Users\luca-\OneDrive\Desktop\University\#MAGISTRALE\2° ANNO\1° SEMESTRE\Ingegneria dei Dati\hw2\homework2)
+2024-11-10T14:55:12.167+01:00  INFO 14936 --- [demo] [           main] com.example.demo.DemoApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2024-11-10T14:55:13.285+01:00  INFO 14936 --- [demo] [           main] com.example.demo.DemoApplicationTests    : Started DemoApplicationTests in 1.375 seconds (process running for 2.241)
+Java HotSpot(TM) 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+WARNING: A Java agent has been loaded dynamically (C:\Users\luca-\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.19\byte-buddy-agent-1.14.19.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+
+
+Test 1 - Query: Efficient approximation algorithms for NP-hard problems
+
+
+
+
+
+Result 1:
+Score: 4.6366973
+Paper: http://localhost:8080/all_htmls/2312.07064.html
+Title: [2312.07064] Efficient Cross-Domain Federated Learning by MixStyle Approximation
+Abstract: Abstract With the advent of interconnected and sensor-equipped edge devices, Federated Learning (FL) has gained significant attention, enabling decentralized learning while maintaining data privacy. However, FL faces t
+wo challenges in real-world tasks: expensive data labeling and domain shift between source and target samples. In this paper, we introduce a privacy-preserving, resource-efficient FL concept for client adaptation in hardware-con
+strained environments. Our approach includes server model pre-training on source data and subsequent fine-tuning on target data via low-end clients. The local client adaptation process is streamlined by probabilistic mixing of i
+nstance-level feature statistics approximated from source and target domain data. The adapted parameters are transferred back to the central server and globally aggregated. Preliminary results indicate that our method reduces computational and transmission costs while maintaining competitive performance on downstream tasks.
+---------------------------------------
+Result 2:
+Score: 4.580719
+Paper: http://localhost:8080/all_htmls/2006.13460.html
+Title: [2006.13460] Local Stochastic Approximation: A Unified View of Federated Learning and Distributed Multi-Task Reinforcement Learning Algorithms
+Abstract: Abstract Motivated by broad applications in reinforcement learning and federated learning, we study local stochastic approximation over a network of agents, where their goal is to find the root of an operator composed 
+of the local operators at the agents. Our focus is to characterize the finite-time performance of this method when the data at each agent are generated from Markov processes, and hence they are dependent. In particularly, we pro
+vide the explicit convergence rates of local stochastic approximation for both constant and time-varying step sizes. Our results show that these rates are within a logarithmic factor of the ones under independent data. We then illustrate the applications of these results to different interesting problems in multi-task reinforcement learning and federated learning.
+---------------------------------------
+Result 3:
+Score: 4.1257706
+Paper: http://localhost:8080/all_htmls/2409.11847.html
+Title: [2409.11847] An efficient wavelet-based physics-informed neural networks for singularly perturbed problems
+Abstract: Abstract Physics-informed neural networks (PINNs) are a class of deep learning models that utilize physics in the form of differential equations to address complex problems, including ones that may involve limited data
+ availability. However, tackling solutions of differential equations with oscillations or singular perturbations and shock-like structures becomes challenging for PINNs. Considering these challenges, we designed an efficient wav
+elet-based PINNs (W-PINNs) model to solve singularly perturbed differential equations. Here, we represent the solution in wavelet space using a family of smooth-compactly supported wavelets. This framework represents the solutio
+n of a differential equation with significantly fewer degrees of freedom while still retaining in capturing, identifying, and analyzing the local structure of complex physical phenomena. The architecture allows the training proc
+ess to search for a solution within wavelet space, making the process faster and more accurate. Further, the proposed model does not rely on automatic differentiations for derivatives involved in differential equations and does 
+not require any prior information regarding the behavior of the solution, such as the location of abrupt features. Thus, through a strategic fusion of wavelets with PINNs, W-PINNs excel at capturing localized nonlinear informati
+on, making them well-suited for problems showing abrupt behavior in certain regions, such as singularly perturbed problems. The efficiency and accuracy of the proposed neural network model are demonstrated in various test proble
+ms, i.e., highly singularly perturbed nonlinear differential equations, the FitzHugh-Nagumo (FHN), and Predator-prey interaction models. The proposed design model exhibits impressive comparisons with traditional PINNs and the recently developed wavelet-based PINNs, which use wavelets as an activation function for solving nonlinear differential equations.
+---------------------------------------
+Result 4:
+Score: 3.8752418
+Paper: http://localhost:8080/all_htmls/2007.05453.html
+Title: [2007.05453] New Oracle-Efficient Algorithms for Private Synthetic Data Release
+Abstract: Abstract We present three new algorithms for constructing differentially private synthetic data?a sanitized version of a sensitive dataset that approximately preserves the answers to a large collection of statistical q
+ueries. All three algorithms are oracle-efficient in the sense that they are computationally efficient when given access to an optimization oracle. Such an oracle can be implemented using many existing (non-private) optimization
+ tools such as sophisticated integer program solvers. While the accuracy of the synthetic data is contingent on the oracle?s optimization performance, the algorithms satisfy differential privacy even in the worst case. For all t
+hree algorithms, we provide theoretical guarantees for both accuracy and privacy. Through empirical evaluation, we demonstrate that our methods scale well with both the dimensionality of the data and the number of queries. Compared to the state-of-the-art method High-Dimensional Matrix Mechanism McKenna et al. (2018), our algorithms provide better accuracy in the large workload and high privacy regime (corresponding to low privacy loss ??\varepsilon ).
+---------------------------------------
+Result 5:
+Score: 3.5404665
+Paper: http://localhost:8080/all_htmls/1912.04977.html
+Title: [1912.04977] Advances and Open Problems in Federated Learning
+Abstract: Abstract Federated learning (FL) is a machine learning setting where many clients (e.g. mobile devices or whole organizations) collaboratively train a model under the orchestration of a central server (e.g. service pro
+vider), while keeping the training data decentralized. FL embodies the principles of focused data collection and minimization, and can mitigate many of the systemic privacy risks and costs resulting from traditional, centralized machine learning and data science approaches. Motivated by the explosive growth in FL research, this paper discusses recent advances and presents an extensive collection of open problems and challenges.
+---------------------------------------
+Result 6:
+Score: 3.5202713
+Paper: http://localhost:8080/all_htmls/1808.00300v1.html
+Title: [1808.00300] Learning Visual Question Answering by Bootstrapping Hard Attention
+Abstract: Abstract Attention mechanisms in biological perception are thought to select subsets of perceptual information for more sophisticated processing which would be prohibitive to perform on all sensory inputs. In computer 
+vision, however, there has been relatively little exploration of hard attention, where some information is selectively ignored, in spite of the success of soft attention, where information is re-weighted and aggregated, but neve
+r filtered out. Here, we introduce a new approach for hard attention and find it achieves very competitive performance on a recently-released visual question answering datasets, equalling and in some cases surpassing similar sof
+t attention architectures while entirely ignoring some features. Even though the hard attention mechanism is thought to be non-differentiable, we found that the feature magnitudes correlate with semantic relevance, and provide a
+ useful signal for our mechanism?s attentional selection criterion. Because hard attention selects important features of the input information, it can also be more efficient than analogous soft attention mechanisms. This is especially important for recent approaches that use non-local pairwise operations, whereby computational and memory costs are quadratic in the size of the set of features.
+---------------------------------------
+Result 7:
+Score: 3.3714173
+Paper: http://localhost:8080/all_htmls/2409.10343v1.html
+Title: Large Language Model Enhanced Hard Sample Identification for Denoising Recommendation
+Abstract: Abstract Implicit feedback, often used to build recommender systems, unavoidably confronts noise due to factors such as misclicks and position bias. Previous studies have attempted to alleviate this by identifying nois
+y samples based on their diverged patterns, such as higher loss values, and mitigating the noise through sample dropping or reweighting. Despite the progress, we observe existing approaches struggle to distinguish hard samples a
+nd noise samples, as they often exhibit similar patterns, thereby limiting their effectiveness in denoising recommendations. To address this challenge, we propose a Large Language Model Enhanced Hard Sample Denoising (LLMHD) fra
+mework. Specifically, we construct an LLM-based scorer to evaluate the semantic consistency of items with the user preference, which is quantified based on summarized historical user interactions. The resulting scores are used t
+o assess the hardness of samples for the pointwise or pairwise training objectives. To ensure efficiency, we introduce a variance-based sample pruning strategy to filter potential hard samples before scoring. Besides, we propose
+ an iterative preference update module designed to continuously refine summarized user preference, which may be biased due to false-positive user-item interactions. Extensive experiments on three real-world datasets and four backbone recommenders demonstrate the effectiveness of our approach.
+---------------------------------------
+Result 8:
+Score: 3.3397331
+Paper: http://localhost:8080/all_htmls/2402.09247.html
+Title: [2402.09247] Momentum Approximation in Asynchronous Private Federated Learning
+Abstract: Abstract Asynchronous protocols have been shown to improve the scalability of federated learning (FL) with a massive number of clients. Meanwhile, momentum-based methods can achieve the best model quality in synchronou
+s FL. However, naively applying momentum in asynchronous FL algorithms leads to slower convergence and degraded model performance. It is still unclear how to effective combinie these two techniques together to achieve a win-win.
+ In this paper, we find that asynchrony introduces implicit bias to momentum updates. In order to address this problem, we propose momentum approximation that minimizes the bias by finding an optimal weighted average of all hist
+orical model updates. Momentum approximation is compatible with secure aggregation as well as differential privacy, and can be easily integrated in production FL systems with a minor communication and storage cost. We empirically demonstrate that on benchmark FL datasets, momentum approximation can achieve 1.15?4×1.15\textrm{--}4\times speed up in convergence compared to existing asynchronous FL optimizers with momentum.
+---------------------------------------
+Result 9:
+Score: 3.3397331
+Paper: http://localhost:8080/all_htmls/2402.12945.html
+Title: [2402.12945] Stochastic Approximation Approach to Federated Machine Learning*
+Abstract: Abstract This paper examines Federated learning (FL) in a Stochastic Approximation (SA) framework. FL is a collaborative way to train neural network models across various participants or clients without centralizing th
+eir data. Each client will train a model on their respective data and send the weights across to a the server periodically for aggregation. The server aggregates these weights which are then used by the clients to re-initialize 
+their neural network and continue the training. SA is an iterative algorithm that uses approximate sample gradients and tapering step size to locate a minimizer of a cost function. In this paper the clients use a stochastic appr
+oximation iterate to update the weights of its neural network. It is shown that the aggregated weights track an autonomous ODE. Numerical simulations are performed and the results are compared with standard algorithms like FedAvg and FedProx. It is observed that the proposed algorithm is robust and gives more reliable estimates of the weights, in particular when the clients data are not identically distributed.
+---------------------------------------
+Result 10:
+Score: 3.234641
+Paper: http://localhost:8080/all_htmls/2410.09116v1.html
+Title: Optimizing Hard-to-Place Kidney Allocation: A Machine Learning Approach to Center Ranking
+Abstract: Abstract Kidney transplantation is the preferred treatment for end-stage renal disease, yet the scarcity of donors and inefficiencies in allocation systems create major bottlenecks, resulting in prolonged wait times an
+d alarming mortality rates. Despite their severe scarcity, timely and effective interventions to prevent non-utilization of life-saving organs remain inadequate. Expedited out-of-sequence placement of hard-to-place kidneys to ce
+nters with the highest likelihood of utilizing them has been recommended in the literature as an effective strategy to improve placement success. Nevertheless, current attempts towards this practice is non-standardized and heavi
+ly rely on the subjective judgment of the decision-makers. This paper proposes a novel data-driven, machine learning-based ranking system for allocating hard-to-place kidneys to centers with a higher likelihood of accepting and 
+successfully transplanting them. Using the national deceased donor kidney offer and transplant datasets, we construct a unique dataset with donor-, center-, and patient-specific features. We propose a data-driven out-of-sequence
+ placement policy that utilizes machine learning models to predict the acceptance probability of a given kidney by a set of transplant centers, ranking them accordingly based on their likelihood of acceptance. Our experiments de
+monstrate that the proposed policy can reduce the average number of centers considered before placement by fourfold for all kidneys and tenfold for hard-to-place kidneys. This significant reduction indicates that our method can improve the utilization of hard-to-place kidneys and accelerate their acceptance, ultimately reducing patient mortality and the risk of graft failure. Further, we utilize machine learning interpretability tools to provide insights into factors influencing the kidney allocation decisions.
+---------------------------------------
+Tempo impiegato per l'esecuzione del test: 20986 ms
+
+
+
+Test 2 - Query: Distributed ledger technology in financial systems
+
+
+
+
+
+Result 1:
+Score: 6.1274195
+Paper: http://localhost:8080/all_htmls/2110.02182.html
+Title: [2110.02182] Blockchain-based Federated Learning: A Comprehensive Survey
+Abstract: Abstract With the technological advances in machine learning, effective ways are available to process the huge amount of data generated in real life. However, issues of privacy and scalability will constrain the develo
+pment of machine learning. Federated learning (FL) can prevent privacy leakage by assigning training tasks to multiple clients, thus separating the central server from the local devices. However, FL still suffers from shortcomin
+gs such as single-point-failure and malicious data. The emergence of blockchain provides a secure and efficient solution for the deployment of FL. In this paper, we conduct a comprehensive survey of the literature on blockchaine
+d FL (BCFL). First, we investigate how blockchain can be applied to federal learning from the perspective of system composition. Then, we analyze the concrete functions of BCFL from the perspective of mechanism design and illustrate what problems blockchain addresses specifically for FL. We also survey the applications of BCFL in reality. Finally, we discuss some challenges and future research directions.
+---------------------------------------
+Result 2:
+Score: 5.685605
+Paper: http://localhost:8080/all_htmls/2307.00543.html
+Title: [2307.00543] Defending Against Malicious Behaviors in Federated Learning with Blockchain
+Abstract: Abstract In the era of deep learning, federated learning (FL) presents a promising approach that allows multi-institutional data owners, or clients, to collaboratively train machine learning models without compromising
+ data privacy. However, most existing FL approaches rely on a centralized server for global model aggregation, leading to a single point of failure. This makes the system vulnerable to malicious attacks when dealing with dishone
+st clients. In this work, we address this problem by proposing a secure and reliable FL system based on blockchain and distributed ledger technology. Our system incorporates a peer-to-peer voting mechanism and a reward-and-slash
+ mechanism, which are powered by on-chain smart contracts, to detect and deter malicious behaviors. Both theoretical and empirical analyses are presented to demonstrate the effectiveness of the proposed approach, showing that our framework is robust against malicious client-side behaviors.
+---------------------------------------
+Result 3:
+Score: 5.6234794
+Paper: http://localhost:8080/all_htmls/2208.12708.html
+Title: [2208.12708] Federated and Privacy-Preserving Learning of Accounting Data in Financial Statement Audits
+Abstract: Abstract. The ongoing ?digital transformation? fundamentally changes audit evidence?s nature, recording, and volume. Nowadays, the International Standards on Auditing (ISA) requires auditors to examine vast volumes of 
+a financial statement?s underlying digital accounting records. As a result, audit firms also ?digitize? their analytical capabilities and invest in Deep Learning (DL), a successful sub-discipline of Machine Learning. The applica
+tion of DL offers the ability to learn specialized audit models from data of multiple clients, e.g., organizations operating in the same industry or jurisdiction. In general, regulations require auditors to adhere to strict data
+ confidentiality measures. At the same time, recent intriguing discoveries showed that large-scale DL models are vulnerable to leaking sensitive training data information. Today, it often remains unclear how audit firms can appl
+y DL models while complying with data protection regulations. In this work, we propose a Federated Learning framework to train DL models on auditing relevant accounting data of multiple clients. The framework encompasses Differe
+ntial Privacy and Split Learning capabilities to mitigate data confidentiality risks at model inference. Our results provide empirical evidence that auditors can benefit from DL models that accumulate knowledge from multiple sources of proprietary client data.
+---------------------------------------
+Result 4:
+Score: 5.622794
+Paper: http://localhost:8080/all_htmls/2202.02817.html
+Title: [2202.02817] Beas: Blockchain Enabled Asynchronous & Secure Federated Machine Learning
+Abstract: Abstract Federated Learning (FL) enables multiple parties to distributively train a ML model without revealing their private datasets. However, it assumes trust in the centralized aggregator which stores and aggregates
+ model updates. This makes it prone to gradient tampering and privacy leakage by a malicious aggregator. Malicious parties can also introduce backdoors into the joint model by poisoning the training data or model gradients. To a
+ddress these issues, we present Beas, the first blockchain-based framework for N?N -party FL that provides strict privacy guarantees of training data using gradient pruning (showing improved differential privacy compared to exis
+ting noise and clipping based techniques). Anomaly detection protocols are used to minimize the risk of data-poisoning attacks, along with gradient pruning that is further used to limit the efficacy of model-poisoning attacks. W
+e also define a novel protocol to prevent premature convergence in heterogeneous learning environments.We perform extensive experiments on multiple datasets with promising results: Beas successfully prevents privacy leakage from
+ dataset reconstruction attacks, and minimizes the efficacy of poisoning attacks. Moreover, it achieves an accuracy similar to centralized frameworks, and its communication and computation overheads scale linearly with the number of participants.
+---------------------------------------
+Result 5:
+Score: 5.5199823
+Paper: http://localhost:8080/all_htmls/2306.17338.html
+Title: [2306.17338] A Survey on Blockchain-Based Federated Learning and Data Privacy
+Abstract: Abstract Federated learning is a decentralized machine learning paradigm that allows multiple clients to collaborate by leveraging local computational power and the model?s transmission. This method reduces the costs a
+nd privacy concerns associated with centralized machine learning methods while ensuring data privacy by distributing training data across heterogeneous devices. On the other hand, federated learning has the drawback of data leak
+age due to the lack of privacy-preserving mechanisms employed during storage, transfer, and sharing, thus posing significant risks to data owners and suppliers. Blockchain technology has emerged as a promising technology for off
+ering secure data-sharing platforms in federated learning, especially in Industrial Internet of Things (IIoT) settings. This survey aims to compare the performance and security of various data privacy mechanisms adopted in block
+chain-based federated learning architectures. We conduct a systematic review of existing literature on secure data-sharing platforms for federated learning provided by blockchain technology, providing an in-depth overview of blo
+ckchain-based federated learning, its essential components, and discussing its principles, and potential applications. The primary contribution of this survey paper is to identify critical research questions and propose potential directions for future research in blockchain-based federated learning.
+---------------------------------------
+Result 6:
+Score: 5.518025
+Paper: http://localhost:8080/all_htmls/2210.15051.html
+Title: [2210.15051] Federated Continual Learning to Detect Accounting Anomalies in Financial Auditing
+Abstract: Abstract The International Standards on Auditing require auditors to collect reasonable assurance that financial statements are free of material misstatement. At the same time, a central objective of Continuous Assuran
+ce is the ?real-time? assessment of digital accounting journal entries. Recently, driven by the advances in artificial intelligence, Deep Learning techniques have emerged in financial auditing to examine vast quantities of accou
+nting data. However, learning highly adaptive audit models in decentralised and dynamic settings remains challenging. It requires the study of data distribution shifts over multiple clients and time periods. In this work, we pro
+pose a Federated Continual Learning framework enabling auditors to learn audit models from decentral clients continuously. We evaluate the framework?s ability to detect accounting anomalies in common scenarios of organizational activity. Our empirical results, using real-world datasets and combined federated-continual learning strategies, demonstrate the learned model?s ability to detect anomalies in audit settings of data distribution shifts.
+---------------------------------------
+Result 7:
+Score: 5.513978
+Paper: http://localhost:8080/all_htmls/2205.07855.html
+Title: [2205.07855] Decentral and Incentivized Federated Learning Frameworks: A Systematic Literature Review
+Abstract: Abstract The advent of Federated Learning (FL) has sparked a new paradigm of parallel and confidential decentralized Machine Learning (ML) with the potential of utilizing the computational power of a vast number of Int
+ernet of Things (IoT), mobile, and edge devices without data leaving the respective device, thus ensuring privacy by design. Yet, simple Federated Learning Frameworks (FLF) naively assume an honest central server and altruistic 
+client participation. In order to scale this new paradigm beyond small groups of already entrusted entities towards mass adoption, FLFs must be (i) truly decentralized, and (ii) incentivized to participants. This systematic lite
+rature review is the first to analyze FLFs that holistically apply both, blockchain technology to decentralize the process and reward mechanisms to incentivize participation. 422 publications were retrieved by querying 12 major 
+scientific databases. After a systematic filtering process, 40 articles remained for an in-depth examination following our five research questions. To ensure the correctness of our findings, we verified the examination results w
+ith the respective authors. Although having the potential to direct the future of distributed and secure Artificial Intelligence, none of the analyzed FLFs is production-ready. The approaches vary heavily in terms of use cases, 
+system design, solved issues, and thoroughness. We provide a systematic approach to classify and quantify differences between FLFs, expose limitations of current works and derive future directions for research in this novel domain.
+---------------------------------------
+Result 8:
+Score: 5.381211
+Paper: http://localhost:8080/all_htmls/2107.10243.html
+Title: [2107.10243] Federated Learning using Smart Contracts on Blockchain, based on Reward Driven Approach
+Abstract: Abstract Over the recent years, Federated machine learning continues to gain interest and momentum where there is a need to draw insights from data while preserving the data provider?s privacy. However, one among other
+ existing challenges in the adoption of federated learning has been the lack of fair, transparent and universally agreed incentivization schemes for rewarding the federated learning contributors. Smart Contracts on a Blockchain 
+network provide transparent, immutable and independently verifiable proofs by all participants of the network. We leverage this open and transparent nature of smart contracts on a blockchain to define incentivization rules for t
+he contributors, which is based on a novel scalar quantity - federated contribution. Such a smart contract based reward-driven model has the potential to revolutionize the federated learning adoption in enterprises. Our contribu
+tion is two-fold: first is to show how smart contract based blockchain can be a very natural communication channel for federated learning. Second, leveraging this infrastructure, we can show how an intuitive measure of each agents? contribution can be built and integrated with the life cycle of the training and reward process.
+---------------------------------------
+Result 9:
+Score: 5.2496333
+Paper: http://localhost:8080/all_htmls/2407.21141.html
+Title: [2407.21141] FL-DECO-BC: A Privacy-Preserving, Provably Secure, and Provenance-Preserving Federated Learning Framework with Decentralized Oracles on Blockchain for VANETs
+Abstract: Abstract Vehicular Ad-Hoc Networks (VANETs) hold immense potential for improving traffic safety and efficiency. However, traditional centralized approaches for machine learning in VANETs raise concerns about data priva
+cy and security. Federated Learning (FL) offers a solution that enables collaborative model training without sharing raw data. This paper proposes FL-DECO-BC, a novel privacy-preserving, provably secure, and provenance-preservin
+g federated learning framework specifically designed for VANETs. FL-DECO-BC leverages decentralized oracles on blockchain to securely access external data sources while ensuring data privacy through advanced techniques. The fram
+ework guarantees provable security through cryptographic primitives and formal verification methods. Furthermore, FL-DECO-BC incorporates a provenance-preserving design to track data origin and history, fostering trust and accountability. This combination of features empowers VANETs with secure and privacy-conscious machine-learning capabilities, paving the way for advanced traffic management and safety applications.
+---------------------------------------
+Result 10:
+Score: 5.202026
+Paper: http://localhost:8080/all_htmls/2104.13130.html
+Title: [2104.13130] Secure and Efficient Federated Learning Through Layering and Sharding Blockchain
+Abstract: Abstract Introducing blockchain into Federated Learning (FL) to build a trusted edge computing environment for transmission and learning has attracted widespread attention as a new decentralized learning pattern. Howev
+er, traditional consensus mechanisms and architectures of blockchain systems face significant challenges in handling large-scale FL tasks, especially on Internet of Things (IoT) devices, due to their substantial resource consump
+tion, limited transaction throughput, and complex communication requirements. To address these challenges, this paper proposes ChainFL, a novel two-layer blockchain-driven FL system. It splits the IoT network into multiple shard
+s within the subchain layer, effectively reducing the scale of information exchange, and employs a Direct Acyclic Graph (DAG)-based mainchain as the mainchain layer, enabling parallel and asynchronous cross-shard validation. Fur
+thermore, the FL procedure is customized to integrate deeply with blockchain technology, and a modified DAG consensus mechanism is designed to mitigate distortion caused by abnormal models. To provide a proof-of-concept implemen
+tation and evaluation, multiple subchains based on Hyperledger Fabric and a self-developed DAG-based mainchain are deployed. Extensive experiments demonstrate that ChainFL significantly surpasses conventional FL systems, showing up to a 14% improvement in training efficiency and a threefold increase in robustness.
+---------------------------------------
+Tempo impiegato per l'esecuzione del test: 66681 ms
+
+
+
+Test 3 - Query: "Blockchain consensus mechanisms"~2
+
+
+
+
+
+Result 1:
+Score: 3.9144468
+Paper: http://localhost:8080/all_htmls/2407.13018.html
+Title: [2407.13018] Proof-of-Collaborative-Learning: A Multi-winner Federated Learning Consensus Algorithm
+Abstract: Abstract Regardless of their variations, blockchains require a consensus mechanism to validate transactions, supervise added blocks, maintain network security, synchronize the network state, and distribute incentives. 
+Proof-of-Work (PoW), one of the most influential implementations of consensus mechanisms, consumes an extraordinary amount of energy for a task that lacks direct productive output. In this paper, we propose Proof-of-Collaborativ
+e-Learning (PoCL), a multi-winner federated learning validated consensus mechanism that redirects the computation power of blockchains to train federated learning models. In addition, we present a novel evaluation mechanism to e
+nsure the efficiency of the locally trained models of miners. We evaluated the security of our evaluation mechanism by introducing and conducting probable attacks. Moreover, we present a novel reward distribution mechanism to incentivize winning miners fairly, and demonstrate that our reward system is fair both within and across all rounds.
+---------------------------------------
+Result 2:
+Score: 3.5940309
+Paper: http://localhost:8080/all_htmls/2304.12889.html
+Title: [2304.12889] Blockchain-based Federated Learning with Secure Aggregation in Trusted Execution Environment for Internet-of-Things
+Abstract: Abstract This paper proposes a blockchain-based Federated Learning (FL) framework with Intel Software Guard Extension (SGX)-based Trusted Execution Environment (TEE) to securely aggregate local models in Industrial Int
+ernet-of-Things (IIoTs). In FL, local models can be tampered with by attackers. Hence, a global model generated from the tampered local models can be erroneous. Therefore, the proposed framework leverages a blockchain network fo
+r secure model aggregation. Each blockchain node hosts an SGX-enabled processor that securely performs the FL-based aggregation tasks to generate a global model. Blockchain nodes can verify the authenticity of the aggregated mod
+el, run a blockchain consensus mechanism to ensure the integrity of the model, and add it to the distributed ledger for tamper-proof storage. Each cluster can obtain the aggregated model from the blockchain and verify its integrity before using it. We conducted several experiments with different CNN models and datasets to evaluate the performance of the proposed framework.
+---------------------------------------
+Result 3:
+Score: 2.8719037
+Paper: http://localhost:8080/all_htmls/2407.21141.html
+Title: [2407.21141] FL-DECO-BC: A Privacy-Preserving, Provably Secure, and Provenance-Preserving Federated Learning Framework with Decentralized Oracles on Blockchain for VANETs
+Abstract: Abstract Vehicular Ad-Hoc Networks (VANETs) hold immense potential for improving traffic safety and efficiency. However, traditional centralized approaches for machine learning in VANETs raise concerns about data priva
+cy and security. Federated Learning (FL) offers a solution that enables collaborative model training without sharing raw data. This paper proposes FL-DECO-BC, a novel privacy-preserving, provably secure, and provenance-preservin
+g federated learning framework specifically designed for VANETs. FL-DECO-BC leverages decentralized oracles on blockchain to securely access external data sources while ensuring data privacy through advanced techniques. The fram
+ework guarantees provable security through cryptographic primitives and formal verification methods. Furthermore, FL-DECO-BC incorporates a provenance-preserving design to track data origin and history, fostering trust and accountability. This combination of features empowers VANETs with secure and privacy-conscious machine-learning capabilities, paving the way for advanced traffic management and safety applications.
+---------------------------------------
+Result 4:
+Score: 2.559412
+Paper: http://localhost:8080/all_htmls/1912.11745.html
+Title: [1912.11745] Proof of Federated Learning: A Novel Energy-recycling Consensus Algorithm
+Abstract: Abstract Proof of work (PoW), the most popular consensus mechanism for Blockchain, requires ridiculously large amounts of energy but without any useful outcome beyond determining accounting rights among miners. To tack
+le the drawback of PoW, we propose a novel energy-recycling consensus algorithm, namely proof of federated learning (PoFL), where the energy originally wasted to solve difficult but meaningless puzzles in PoW is reinvested to fe
+derated learning. Federated learning and pooled-ming, a trend of PoW, have a natural fit in terms of organization structure. However, the separation between the data usufruct and ownership in Blockchain lead to data privacy leak
+age in model training and verification, deviating from the original intention of federal learning. To address the challenge, a reverse game-based data trading mechanism and a privacy-preserving model verification mechanism are p
+roposed. The former can guard against training data leakage while the latter verifies the accuracy of a trained model with privacy preservation of the task requester?s test data as well as the pool?s submitted model. To the best
+ of our knowledge, our paper is the first work to employ federal learning as the proof of work for Blockchain. Extensive simulations based on synthetic and real-world data demonstrate the effectiveness and efficiency of our proposed mechanisms.
+---------------------------------------
+Result 5:
+Score: 2.523751
+Paper: http://localhost:8080/all_htmls/2201.08551.html
+Title: [2201.08551] Blockchain-based Collaborated Federated Learning for Improved Security, Privacy and Reliability
+Abstract: Abstract Federated Learning (FL) provides privacy preservation by allowing the model training at edge devices without the need of sending the data from edge to centralized server. FL has distributed the implementation 
+of ML. Another variant of FL which is well suited for the Internet of Things (IoT) is known as Collaborated Federated Learning (CFL), which does not require an edge device to have a direct link to the model aggregator. Instead, 
+the devices can connect to the central model aggregator via other devices using them as relays. Although, FL and CFL protect the privacy of edge devices but raises security challenges for a centralized server that performs model
+ aggregation. The centralized server is prone to malfunction, backdoor attacks, model corruption, adversarial attacks and external attacks. Moreover, edge device to centralized server data exchange is not required in FL and CFL,
+ but model parameters are sent from the model aggregator (global model) to edge devices (local model), which is still prone to cyber-attacks. These security and privacy concerns can be potentially addressed by Blockchain technol
+ogy. The blockchain is a decentralized and consensus-based chain where devices can share consensus ledgers with increased reliability and security, thus significantly reducing the cyberattacks on an exchange of information. In t
+his work, we will investigate the efficacy of blockchain-based decentralized exchange of model parameters and relevant information among edge devices and from a centralized server to edge devices. Moreover, we will be conducting
+ the feasibility analysis for blockchain-based CFL models for different application scenarios like the internet of vehicles, and the internet of things. The proposed study aims to improve the security, reliability and privacy preservation by the use of blockchain-powered CFL.
+---------------------------------------
+Result 6:
+Score: 2.4578238
+Paper: http://localhost:8080/all_htmls/2408.07096.html
+Title: [2408.07096] OFL-W3: A One-shot Federated Learning System on Web 3.0
+Abstract: Abstract. Federated Learning (FL) addresses the challenges posed by data silos, which arise from privacy, security regulations, and ownership concerns. Despite these barriers, FL enables these isolated data repositorie
+s to participate in collaborative learning without compromising privacy or security. Concurrently, the advancement of blockchain technology and decentralized applications (DApps) within Web 3.0 heralds a new era of transformativ
+e possibilities in web development. As such, incorporating FL into Web 3.0 paves the path for overcoming the limitations of data silos through collaborative learning. However, given the transaction speed constraints of core bloc
+kchains such as Ethereum (ETH) and the latency in smart contracts, employing one-shot FL, which minimizes client-server interactions in traditional FL to a single exchange, is considered more apt for Web 3.0 environments. This p
+aper presents a practical one-shot FL system for Web 3.0, termed OFL-W3. OFL-W3 capitalizes on blockchain technology by utilizing smart contracts for managing transactions. Meanwhile, OFL-W3 utilizes the Inter-Planetary File Sys
+tem (IPFS) coupled with Flask communication, to facilitate backend server operations to use existing one-shot FL algorithms. With the integration of the incentive mechanism, OFL-W3 showcases an effective implementation of one-shot FL on Web 3.0, offering valuable insights and future directions for AI combined with Web 3.0 studies.
+---------------------------------------
+Result 7:
+Score: 2.427352
+Paper: http://localhost:8080/all_htmls/2405.20776.html
+Title: [2405.20776] Federated Learning with Blockchain-Enhanced Machine Unlearning: A Trustworthy Approach
+Abstract: Abstract With the growing need to comply with privacy regulations and respond to user data deletion requests, integrating machine unlearning into IoT-based federated learning has become imperative. Traditional unlearni
+ng methods, however, often lack verifiable mechanisms, leading to challenges in establishing trust. This paper delves into the innovative integration of blockchain technology with federated learning to surmount these obstacles. 
+Blockchain fortifies the unlearning process through its inherent qualities of immutability, transparency, and robust security. It facilitates verifiable certification, harmonizes security with privacy, and sustains system effici
+ency. We introduce a framework that melds blockchain with federated learning, thereby ensuring an immutable record of unlearning requests and actions. This strategy not only bolsters the trustworthiness and integrity of the fede
+rated learning model but also adeptly addresses efficiency and security challenges typical in IoT environments. Our key contributions encompass a certification mechanism for the unlearning process, the enhancement of data security and privacy, and the optimization of data management to ensure system responsiveness in IoT scenarios.
+---------------------------------------
+Result 8:
+Score: 2.427352
+Paper: http://localhost:8080/all_htmls/2303.13727.html
+Title: [2303.13727] A Survey on Secure and Private Federated Learning Using Blockchain: Theory and Application in Resource-constrained Computing
+Abstract: Abstract Federated Learning (FL) has gained widespread popularity in recent years due to the fast booming of advanced machine learning and artificial intelligence along with emerging security and privacy threats. FL en
+ables efficient model generation from local data storage of the edge devices without revealing the sensitive data to any entities. While this paradigm partly mitigates the privacy issues of users? sensitive data, the performance
+ of the FL process can be threatened and reached a bottleneck due to the growing cyber threats and privacy violation techniques. To expedite the proliferation of FL process, the integration of blockchain for FL environments has 
+drawn prolific attention from the people of academia and industry. Blockchain has the potential to prevent security and privacy threats with its decentralization, immutability, consensus, and transparency characteristic. However
+, if the blockchain mechanism requires costly computational resources, then the resource-constrained FL clients cannot be involved in the training. Considering that, this survey focuses on reviewing the challenges, solutions, an
+d future directions for the successful deployment of blockchain in resource-constrained FL environments. We comprehensively review variant blockchain mechanisms that are suitable for FL process and discuss their trade-offs for a
+ limited resource budget. Further, we extensively analyze the cyber threats that could be observed in a resource-constrained FL environment, and how blockchain can play a key role to block those cyber attacks. To this end, we highlight some potential solutions towards the coupling of blockchain and federated learning that can offer high levels of reliability, data privacy, and distributed computing performance.
+---------------------------------------
+Result 9:
+Score: 2.3968349
+Paper: http://localhost:8080/all_htmls/2403.00873.html
+Title: [2403.00873] Blockchain-empowered Federated Learning: Benefits, Challenges, and Solutions
+Abstract: Abstract Federated learning (FL) is a distributed machine learning approach that protects user data privacy by training models locally on clients and aggregating them on a parameter server. While effective at preservin
+g privacy, FL systems face limitations such as single points of failure, lack of incentives, and inadequate security. To address these challenges, blockchain technology is integrated into FL systems to provide stronger security,
+ fairness, and scalability. However, blockchain-empowered FL (BC-FL) systems introduce additional demands on network, computing, and storage resources. This survey provides a comprehensive review of recent research on BC-FL syst
+ems, analyzing the benefits and challenges associated with blockchain integration. We explore why blockchain is applicable to FL, how it can be implemented, and the challenges and existing solutions for its integration. Additionally, we offer insights on future research directions for the BC-FL system.
+---------------------------------------
+Result 10:
+Score: 2.3663042
+Paper: http://localhost:8080/all_htmls/2110.15457.html
+Title: [2110.15457] DFL: High-Performance Blockchain-Based Federated Learning
+Abstract: Abstract Many researchers have proposed replacing the aggregation server in federated learning with a blockchain system to improve privacy, robustness, and scalability. In this approach, clients would upload their upda
+ted models to the blockchain ledger and use a smart contract to perform model averaging. However, the significant delay and limited computational capabilities of blockchain systems make it inefficient to support machine learning
+ applications on the blockchain. In this paper, we propose a new public blockchain architecture called DFL, which is specially optimized for distributed federated machine learning. Our architecture inherits the merits of traditi
+onal blockchain systems while achieving low latency and low resource consumption by waiving global consensus. To evaluate the performance and robustness of our architecture, we implemented a prototype and tested it on a physical
+ four-node network, and also developed a simulator to simulate larger networks and more complex situations. Our experiments show that the DFL architecture can reach over 90% accuracy for non-I.I.D. datasets, even in the presence of model poisoning attacks, while ensuring that the blockchain part consumes less than 5% of hardware resources.
+---------------------------------------
+Tempo impiegato per l'esecuzione del test: 65007 ms
+
+
+
+Test 4 - Query: +title:"Quantum algorithms" content:Shor's algorithm content:Grover's algorithm
+
+
+
+
+
+Result 1:
+Score: 5.8432355
+Paper: http://localhost:8080/all_htmls/2405.13788v1.html
+Title: Quantum algorithm for large-scale market equilibrium computation
+Abstract: Abstract Classical algorithms for market equilibrium computation such as proportional response dynamics face scalability issues with Internet-based applications such as auctions, recommender systems, and fair division,
+ despite having an almost linear runtime in terms of the product of buyers and goods. In this work, we provide the first quantum algorithm for market equilibrium computation with sub-linear performance. Our algorithm provides a 
+polynomial runtime speedup in terms of the product of the number of buyers and goods while reaching the same optimization objective value as the classical algorithm. Numerical simulations of a system with 16384 buyers and goods support our theoretical results that our quantum algorithm provides a significant speedup.
+---------------------------------------
+Tempo impiegato per l'esecuzione del test: 64785 ms
+
+
+
+Test 5 - Query: artificial intelligence in healthcare
+
+
+
+Results using MultiSimilarity ( ClassicSimilarity, BM25Similarity, BooleanSimilarity, LMDirichletSimilarity):
+
+
+
+Result 1:
+Score: 14.079888
+Paper: http://localhost:8080/all_htmls/141_arXiv2306.11963.html
+Title: A Survey of Multimodal Information Fusion for Smart Healthcare: Mapping the Journey from Data to Wisdom
+Abstract: Abstract Multimodal medical data fusion has emerged as a transformative approach in smart healthcare, enabling a comprehensive understanding of patient health and personalized treatment plans. In this paper, a journey 
+from data to information to knowledge to wisdom (DIKW) is explored through multimodal fusion for smart healthcare. We present a comprehensive review of multimodal medical data fusion focused on the integration of various data mo
+dalities. The review explores different approaches such as feature selection, rule-based systems, machine learning, deep learning, and natural language processing, for fusing and analyzing multimodal data. This paper also highli
+ghts the challenges associated with multimodal fusion in healthcare. By synthesizing the reviewed frameworks and theories, it proposes a generic framework for multimodal medical data fusion that aligns with the DIKW model. Moreo
+ver, it discusses future directions related to the four pillars of healthcare: Predictive, Preventive, Personalized, and Participatory approaches. The components of the comprehensive survey presented in this paper form the found
+ation for more successful implementation of multimodal fusion in smart healthcare. Our findings can guide researchers and practitioners in leveraging the power of multimodal fusion with state-of-the-art approaches to revolutionize healthcare and improve patient outcomes.
+---------------------------------------
+Result 2:
+Score: 14.079888
+Paper: http://localhost:8080/all_htmls/241_arXiv2306.11963.html
+Title: A Survey of Multimodal Information Fusion for Smart Healthcare: Mapping the Journey from Data to Wisdom
+Abstract: Abstract Multimodal medical data fusion has emerged as a transformative approach in smart healthcare, enabling a comprehensive understanding of patient health and personalized treatment plans. In this paper, a journey 
+from data to information to knowledge to wisdom (DIKW) is explored through multimodal fusion for smart healthcare. We present a comprehensive review of multimodal medical data fusion focused on the integration of various data mo
+dalities. The review explores different approaches such as feature selection, rule-based systems, machine learning, deep learning, and natural language processing, for fusing and analyzing multimodal data. This paper also highli
+ghts the challenges associated with multimodal fusion in healthcare. By synthesizing the reviewed frameworks and theories, it proposes a generic framework for multimodal medical data fusion that aligns with the DIKW model. Moreo
+ver, it discusses future directions related to the four pillars of healthcare: Predictive, Preventive, Personalized, and Participatory approaches. The components of the comprehensive survey presented in this paper form the found
+ation for more successful implementation of multimodal fusion in smart healthcare. Our findings can guide researchers and practitioners in leveraging the power of multimodal fusion with state-of-the-art approaches to revolutionize healthcare and improve patient outcomes.
+---------------------------------------
+Result 3:
+Score: 13.756542
+Paper: http://localhost:8080/all_htmls/2304.00524.html
+Title: [2304.00524] A Survey on Federated Learning for the Healthcare Metaverse: Concepts, Applications, Challenges, and Future Directions
+Abstract: Abstract Recent technological advancements have considerately improved healthcare systems to provide various intelligent healthcare services and improve the quality of life. Federated learning (FL), a new branch of art
+ificial intelligence (AI), opens opportunities to deal with privacy issues in healthcare systems and exploit data and computing resources available at distributed devices. Additionally, the Metaverse, through integrating emergin
+g technologies, such as AI, cloud edge computing, Internet of Things (IoT), blockchain, and semantic communications, has transformed many vertical domains in general and the healthcare sector in particular. Obviously, FL shows m
+any benefits and provides new opportunities for conventional and Metaverse healthcare, motivating us to provide a survey on the usage of FL for Metaverse healthcare systems. First, we present preliminaries to IoT-based healthcar
+e systems, FL in conventional healthcare, and Metaverse healthcare. The benefits of FL in Metaverse healthcare are then discussed, from improved privacy and scalability, better interoperability, better data management, and extra
+ security to automation and low-latency healthcare services. Subsequently, we discuss several applications pertaining to FL-enabled Metaverse healthcare, including medical diagnosis, patient monitoring, medical education, infectious disease, and drug discovery. Finally, we highlight significant challenges and potential solutions toward the realization of FL in Metaverse healthcare.
+---------------------------------------
+Result 4:
+Score: 13.345982
+Paper: http://localhost:8080/all_htmls/2208.03392.html
+Title: [2208.03392] Federated Learning for Medical Applications: A Taxonomy, Current Trends, Challenges, and Future Research Directions
+Abstract: Abstract With the advent of the Internet of Things (IoT), Artificial Intelligence (AI), Machine Learning (ML), and Deep Learning (DL) algorithms, the landscape of data-driven medical applications has emerged as a promi
+sing avenue for designing robust and scalable diagnostic and prognostic models from medical data. This has gained a lot of attention from both academia and industry, leading to significant improvements in healthcare quality. How
+ever, the adoption of AI-driven medical applications still faces tough challenges, including meeting security, privacy, and quality of service (QoS) standards. Recent developments in Federated Learning (FL) have made it possible
+ to train complex machine-learned models in a distributed manner and has become an active research domain, particularly processing the medical data at the edge of the network in a decentralized way to preserve privacy and addres
+s security concerns. To this end, in this paper, we explore the present and future of FL technology in medical applications where data sharing is a significant challenge. We delve into the current research trends and their outco
+mes, unravelling the complexities of designing reliable and scalable FL models. Our paper outlines the fundamental statistical issues in FL, tackles device-related problems, addresses security challenges, and navigates the compl
+exity of privacy concerns, all while highlighting its transformative potential in the medical field. Our study primarily focuses on medical applications of FL, particularly in the context of global cancer diagnosis. We highlight
+ the potential of FL to enable computer-aided diagnosis tools that address this challenge with greater effectiveness than traditional data-driven methods. Recent literature has shown that FL models are robust and generalize well
+ to new data, which is essential for medical applications. We hope that this comprehensive review will serve as a checkpoint for the field, summarizing the current state-of-the-art and identifying open problems and future research directions.
+---------------------------------------
+Result 5:
+Score: 13.11874
+Paper: http://localhost:8080/all_htmls/2407.16888v2.html
+Title: A Nested Model for AI Design and Validation
+Abstract: Abstract The growing AI field faces trust, transparency, fairness, and discrimination challenges. Despite the need for new regulations, there is a mismatch between regulatory science and AI, preventing a consistent fra
+mework. A five-layer nested model for AI design and validation aims to address these issues and streamline AI application design and validation, improving fairness, trust, and AI adoption. This model aligns with regulations, add
+resses AI practitioners? daily challenges, and offers prescriptive guidance for determining appropriate evaluation approaches by identifying unique validity threats. We have three recommendations motivated by this model: authors
+ should distinguish between layers when claiming contributions to clarify the specific areas in which the contribution is made and to avoid confusion, authors should explicitly state upstream assumptions to ensure that the context and limitations of their AI system are clearly understood, AI venues should promote thorough testing and validation of AI systems and their compliance with regulatory requirements.
+---------------------------------------
+Result 6:
+Score: 13.106132
+Paper: http://localhost:8080/all_htmls/2407.18358.html
+Title: [2407.18358] Generative AI like ChatGPT in Blockchain Federated Learning: use cases, opportunities and future
+Abstract: Abstract Federated learning has become a significant approach for training machine learning models using decentralized data without necessitating the sharing of this data. Recently, the incorporation of generative arti
+ficial intelligence (AI) methods has provided new possibilities for improving privacy, augmenting data, and customizing models. This research explores potential integrations of generative AI in federated learning, revealing vari
+ous opportunities to enhance privacy, data efficiency, and model performance. It particularly emphasizes the importance of generative models like generative adversarial networks (GANs) and variational autoencoders (VAEs) in crea
+ting synthetic data that replicates the distribution of real data. Generating synthetic data helps federated learning address challenges related to limited data availability and supports robust model development. Additionally, we examine various applications of generative AI in federated learning that enable more personalized solutions.
+---------------------------------------
+Result 7:
+Score: 13.028117
+Paper: http://localhost:8080/all_htmls/2004.05843.html
+Title: [2004.05843] Federated Machine Learning for Intelligent IoT via Reconfigurable Intelligent Surface
+Abstract: Abstract Intelligent Internet-of-Things (IoT) will be transformative with the advancement of artificial intelligence and high-dimensional data analysis, shifting from ?connected things? to ?connected intelligence?. Thi
+s shall unleash the full potential of intelligent IoT in a plethora of exciting applications, such as self-driving cars, unmanned aerial vehicles, healthcare, robotics, and supply chain finance. These applications drive the need
+ of developing revolutionary computation, communication and artificial intelligence technologies that can make low-latency decisions with massive real-time data. To this end, federated machine learning, as a disruptive technolog
+y, is emerged to distill intelligence from the data at network edge, while guaranteeing device privacy and data security. However, the limited communication bandwidth is a key bottleneck of model aggregation for federated machin
+e learning over radio channels. In this article, we shall develop an over-the-air computation based communication-efficient federated machine learning framework for intelligent IoT networks via exploiting the waveform superposition property of a multi-access channel. Reconfigurable intelligent surface is further leveraged to reduce the model aggregation error via enhancing the signal strength by reconfiguring the wireless propagation environments.     
+---------------------------------------
+Result 8:
+Score: 12.548246
+Paper: http://localhost:8080/all_htmls/2105.14659.html
+Title: [2105.14659] Federated Learning for Industrial Internet of Things in Future Industries
+Abstract: Abstract The Industrial Internet of Things (IIoT) offers promising opportunities to transform the operation of industrial systems and becomes a key enabler for future industries. Recently, artificial intelligence (AI) 
+has been widely utilized for realizing intelligent IIoT applications where AI techniques require centralized data collection and processing. However, this is not always feasible in realistic scenarios due to the high scalability
+ of modern IIoT networks and growing industrial data confidentiality. Federated Learning (FL), as an emerging collaborative AI approach, is particularly attractive for intelligent IIoT networks by coordinating multiple IIoT devi
+ces and machines to perform AI training at the network edge while helping protect user privacy. In this article, we provide a detailed overview and discussions of the emerging applications of FL in key IIoT services and applications. A case study is also provided to demonstrate the feasibility of FL in IIoT. Finally, we highlight a range of interesting open research topics that need to be addressed for the full realization of FL-IIoT in industries.    
+---------------------------------------
+Result 9:
+Score: 12.2973385
+Paper: http://localhost:8080/all_htmls/2111.08834.html
+Title: [2111.08834] Federated Learning for Smart Healthcare: A Survey
+Abstract: Abstract. Recent advances in communication technologies and Internet-of-Medical-Things have transformed smart healthcare enabled by artificial intelligence (AI). Traditionally, AI techniques require centralized data co
+llection and processing that may be infeasible in realistic healthcare scenarios due to the high scalability of modern healthcare networks and growing data privacy concerns. Federated Learning (FL), as an emerging distributed co
+llaborative AI paradigm, is particularly attractive for smart healthcare, by coordinating multiple clients (e.g., hospitals) to perform AI training without sharing raw data. Accordingly, we provide a comprehensive survey on the 
+use of FL in smart healthcare. First, we present the recent advances in FL, the motivations, and the requirements of using FL in smart healthcare. The recent FL designs for smart healthcare are then discussed, ranging from resou
+rce-aware FL, secure and privacy-aware FL to incentive FL and personalized FL. Subsequently, we provide a state-of-the-art review on the emerging applications of FL in key healthcare domains, including health data management, re
+mote health monitoring, medical imaging, and COVID-19 detection. Several recent FL-based smart healthcare projects are analyzed, and the key lessons learned from the survey are also highlighted. Finally, we discuss interesting research challenges and possible directions for future FL research in smart healthcare.
+---------------------------------------
+Result 10:
+Score: 12.281559
+Paper: http://localhost:8080/all_htmls/2408.02575v1.html
+Title: Artificial Intelligence for Public Health Surveillance in Africa: Applications and Opportunities
+Abstract: Abstract Artificial Intelligence (AI) is revolutionizing various fields, including public health surveillance. In Africa, where health systems frequently encounter challenges such as limited resources, inadequate infra
+structure, failed health information systems and a shortage of skilled health professionals, AI offers a transformative opportunity. This paper investigates the applications of AI in public health surveillance across the contine
+nt, presenting successful case studies and examining the benefits, opportunities, and challenges of implementing AI technologies in African healthcare settings. Our paper highlights AI?s potential to enhance disease monitoring a
+nd health outcomes, and support effective public health interventions. The findings presented in the paper demonstrate that AI can significantly improve the accuracy and timeliness of disease detection and prediction, optimize r
+esource allocation, and facilitate targeted public health strategies. Additionally, our paper identified key barriers to the widespread adoption of AI in African public health systems and proposed actionable recommendations to overcome these challenges.
+---------------------------------------
+Tempo impiegato per l'esecuzione del test: 65201 ms
+
+
+
+Test 6 - Query: content:"neural networks in natural language processing"
+
+
+
+
+
+Result 1:
+Score: 0.7003125
+Paper: http://localhost:8080/all_htmls/2405.03484.html
+Title: [2405.03484] Whispy: Adapting STT Whisper Models to Real-Time Environments
+Abstract: Abstract Large general-purpose transformer models have recently become the mainstay in the realm of speech analysis. In particular, Whisper achieves state-of-the-art results in relevant tasks such as speech recognition
+, translation, language identification, and voice activity detection. However, Whisper models are not designed to be used in real-time conditions, and this limitation makes them unsuitable for a vast plethora of practical applic
+ations. In this paper, we introduce Whispy, a system intended to bring live capabilities to the Whisper pretrained models. As a result of a number of architectural optimisations, Whispy is able to consume live audio streams and 
+generate high level, coherent voice transcriptions, while still maintaining a low computational cost. We evaluate the performance of our system on a large repository of publicly available speech datasets, investigating how the transcription mechanism introduced by Whispy impacts on the Whisper output. Experimental results show how Whispy excels in robustness, promptness, and accuracy.
+---------------------------------------
+Result 2:
+Score: 0.6588265
+Paper: http://localhost:8080/all_htmls/1706.02427v1.html
+Title: [1706.02427] Content-Based Table Retrieval for Web Queries
+Abstract: Abstract Understanding the connections between unstructured text and semi-structured table is an important yet neglected problem in natural language processing. In this work, we focus on content-based table retrieval. 
+Given a query, the task is to find the most relevant table from a collection of tables. Further progress towards improving this area requires powerful models of semantic matching and richer training and evaluation resources. To 
+remedy this, we present a ranking based approach, and implement both carefully designed features and neural network architectures to measure the relevance between a query and the content of a table. Furthermore, we release an op
+en-domain dataset that includes 21,113 web queries for 273,816 tables. We conduct comprehensive experiments on both real world and synthetic datasets. Results verify the effectiveness of our approach and present the challenges for this task.
+---------------------------------------
+Result 3:
+Score: 0.57384145
+Paper: http://localhost:8080/all_htmls/2002.09599.html
+Title: [2002.09599] Training Question Answering Models From Synthetic Data
+Abstract: Abstract Question and answer generation is a data augmentation method that aims to improve question answering (QA) models given the limited amount of human labeled data. However, a considerable gap remains between synt
+hetic and human-generated question-answer pairs. This work aims to narrow this gap by taking advantage of large language models and explores several factors such as model size, quality of pretrained models, scale of data synthes
+ized, and algorithmic choices. On the SQuAD1.1 question answering task, we achieve higher accuracy using solely synthetic questions and answers than when using the SQuAD1.1 training set questions alone. Removing access to real W
+ikipedia data, we synthesize questions and answers from a synthetic corpus generated by an 8.3 billion parameter GPT-2 model. With no access to human supervision and only access to other models, we are able to train state of the
+ art question answering networks on entirely model-generated data that achieve 88.4 Exact Match (EM) and 93.9 F1 score on the SQuAD1.1 dev set. We further apply our methodology to SQuAD2.0 and show a 2.8 absolute gain on EM score compared to prior work using synthetic data.
+---------------------------------------
+Result 4:
+Score: 0.5082766
+Paper: http://localhost:8080/all_htmls/2403.15263.html
+Title: [2403.15263] Federated Bayesian Deep Learning: The Application of Statistical Aggregation Methods to Bayesian Models
+Abstract: Abstract Federated learning (FL) is an approach to training machine learning models that takes advantage of multiple distributed datasets while maintaining data privacy and reducing communication costs associated with 
+sharing local datasets. Aggregation strategies have been developed to pool or fuse the weights and biases of distributed deterministic models; however, modern deterministic deep learning (DL) models are often poorly calibrated a
+nd lack the ability to communicate a measure of epistemic uncertainty in prediction, which is desirable for remote sensing platforms and safety-critical applications. Conversely, Bayesian DL models are often well calibrated and 
+capable of quantifying and communicating a measure of epistemic uncertainty along with a competitive prediction accuracy. Unfortunately, because the weights and biases in Bayesian DL models are defined by a probability distribut
+ion, simple application of the aggregation methods associated with FL schemes for deterministic models is either impossible or results in sub-optimal performance. In this work, we use independent and identically distributed (IID
+) and non-IID partitions of the CIFAR-10 dataset and a fully variational ResNet-20 architecture to analyze six different aggregation strategies for Bayesian DL models. Additionally, we analyze the traditional federated averaging
+ approach applied to an approximate Bayesian Monte Carlo dropout model as a lightweight alternative to more complex variational inference methods in FL. We show that aggregation strategy is a key hyperparameter in the design of a Bayesian FL system with downstream effects on accuracy, calibration, uncertainty quantification, training stability, and client compute requirements.
+---------------------------------------
+Result 5:
+Score: 0.43612075
+Paper: http://localhost:8080/all_htmls/2407.13699v1.html
+Title: A Comprehensive Review of Recommender Systems: Transitioning from Theory to Practice
+Abstract: Abstract Recommender Systems (RS) play an integral role in enhancing user experiences by providing personalized item suggestions. This survey reviews the progress in RS inclusively from 2017 to 2024, effectively connec
+ting theoretical advances with practical applications. We explore the development from traditional RS techniques like content-based and collaborative filtering to advanced methods involving deep learning, graph-based models, rei
+nforcement learning, and large language models. We also discuss specialized systems such as context-aware, review-based, and fairness-aware RS. The primary goal of this survey is to bridge theory with practice. It addresses chal
+lenges across various sectors, including e-commerce, healthcare, and finance, emphasizing the need for scalable, real-time, and trustworthy solutions. Through this survey, we promote stronger partnerships between academic resear
+ch and industry practices. The insights offered by this survey aim to guide industry professionals in optimizing RS deployment and to inspire future research directions, especially in addressing emerging technological and societal trends. 111 The ideas and discussions produced in this work are strictly those of the authors and do not represent the points of view of the institutions the authors belong to.
+---------------------------------------
+Tempo impiegato per l'esecuzione del test: 65034 ms
+
+
+
+Test 7 - Query: quantum computing
+
+
+
+
+
+Result 1:
+Score: 1.196468
+Paper: http://localhost:8080/all_htmls/2306.15708.html
+Title: [2306.15708] Quantum Federated Learning: Analysis, Design and Implementation Challenges
+Abstract: Abstract Quantum Federated Learning (QFL) has gained significant attention due to quantum computing and machine learning advancements. As the demand for QFL continues to surge, there is a pressing need to comprehend it
+s intricacies in distributed environments. This paper aims to provide a comprehensive overview of the current state of QFL, addressing a crucial knowledge gap in the existing literature. We develop ideas for new QFL frameworks, 
+explore diverse use cases of applications, and consider the critical factors influencing their design. The technical contributions and limitations of various QFL research projects are examined while presenting future research directions and open questions for further exploration.
+---------------------------------------
+Result 2:
+Score: 1.1809465
+Paper: http://localhost:8080/all_htmls/2106.00005.html
+Title: [2106.00005] Quantum Federated Learning with Quantum Data
+Abstract: Abstract Quantum machine learning (QML) has emerged as a promising field that leans on the developments in quantum computing to explore large complex machine learning problems. Recently, some purely quantum machine lea
+rning models were proposed such as quantum convolutional neural networks (QCNN) to perform classification on quantum data. However, all of the existing QML models rely on centralized solutions that cannot scale well for large-sc
+ale and distributed quantum networks. Hence, it is apropos to consider more practical quantum federated learning (QFL) solutions tailored towards emerging quantum network architectures. Indeed, developing QFL frameworks for quan
+tum networks is critical given the fragile nature of computing qubits and the difficulty of transferring them. On top of its practical momentousness, QFL allows for distributing quantum learning by leveraging existing wireless c
+ommunication infrastructure. This paper proposes the first fully quantum federated learning framework that can operate over quantum data and, thus, share the learning of quantum circuit parameters in a decentralized manner. Firs
+t, given the lack of existing quantum federated datasets in the literature, the proposed framework begins by generating the first quantum federated dataset, with a hierarchical data format, for distributed quantum networks. Then
+, clients sharing QCNN models are fed with the quantum data to perform a classification task. Subsequently, the server aggregates the learnable quantum circuit parameters from clients and performs federated averaging. Extensive experiments are conducted to evaluate and validate the effectiveness of the proposed QFL solution. This work is the first to combine Google?s TensorFlow Federated and TensorFlow Quantum in a practical implementation.
+---------------------------------------
+Result 3:
+Score: 1.067253
+Paper: http://localhost:8080/all_htmls/2409.19359.html
+Title: [2409.19359] Quantum Delegated and Federated Learning via Quantum Homomorphic Encryption
+Abstract: Abstract Quantum learning models hold the potential to bring computational advantages over the classical realm. As powerful quantum servers become available on the cloud, ensuring the protection of clients? private dat
+a becomes crucial. By incorporating quantum homomorphic encryption schemes, we present a general framework that enables quantum delegated and federated learning with a computation-theoretical data privacy guarantee. We show that
+ learning and inference under this framework feature substantially lower communication complexity compared with schemes based on blind quantum computing. In addition, in the proposed quantum federated learning scenario, there is
+ less computational burden on local quantum devices from the client side, since the server can operate on encrypted quantum data without extracting any information. We further prove that certain quantum speedups in supervised le
+arning carry over to private delegated learning scenarios employing quantum kernel methods. Our results provide a valuable guide toward privacy-guaranteed quantum learning on the cloud, which may benefit future studies and security-related applications.
+---------------------------------------
+Result 4:
+Score: 1.0431863
+Paper: http://localhost:8080/all_htmls/2310.14516.html
+Title: [2310.14516] Foundations of Quantum Federated Learning Over Classical and Quantum Networks This work was supported in part through a Microgrant by Zaiku Group, the NSF Grants 2114267, CNS-1955744, NSF-ERC Center for Quantum Networks grant EEC-1941583, and MURI ARO Grant W911NF2110325.
+Abstract: Abstract Quantum federated learning (QFL) is a novel framework that integrates the advantages of classical federated learning (FL) with the computational power of quantum technologies. This includes quantum computing a
+nd quantum machine learning (QML), enabling QFL to handle high-dimensional complex data. QFL can be deployed over both classical and quantum communication networks in order to benefit from information-theoretic security levels s
+urpassing traditional FL frameworks. In this paper, we provide the first comprehensive investigation of the challenges and opportunities of QFL. We particularly examine the key components of QFL and identify the unique challenge
+s that arise when deploying it over both classical and quantum networks. We then develop novel solutions and articulate promising research directions that can help address the identified challenges. We also provide actionable recommendations to advance the practical realization of QFL.
+---------------------------------------
+Result 5:
+Score: 0.99069554
+Paper: http://localhost:8080/all_htmls/2405.00909.html
+Title: [2405.00909] Quantum Federated Learning Experiments in the Cloud with Data Encoding
+Abstract: Abstract. Quantum Federated Learning (QFL) is an emerging concept that aims to unfold federated learning (FL) over quantum networks, enabling collaborative quantum model training along with local data privacy. We explo
+re the challenges of deploying QFL on cloud platforms, emphasizing quantum intricacies and platform limitations. The proposed data-encoding-driven QFL, with a proof of concept (GitHub Open Source) using genomic data sets on quantum simulators, shows promising results.111Authors are from IoT & SE Lab, School of IT, Deakin University, shiva.pokhrel@deakin.edu.au.
+---------------------------------------
+Result 6:
+Score: 0.96552515
+Paper: http://localhost:8080/all_htmls/2402.09902.html
+Title: [2402.09902] Towards Federated Learning on the Quantum Internet
+Abstract: Abstract While the majority of focus in quantum computing has so far been on monolithic quantum systems, quantum communication networks and the quantum internet in particular are increasingly receiving attention from r
+esearchers and industry alike. The quantum internet may allow a plethora of applications such as distributed or blind quantum computing, though research still is at an early stage, both for its physical implementation as well as
+ algorithms; thus suitable applications are an open research question. We evaluate a potential application for the quantum internet, namely quantum federated learning. We run experiments under different settings in various scena
+rios (e.g. network constraints) using several datasets from different domains and show that (1) quantum federated learning is a valid alternative for regular training and (2) network topology and nature of training are crucial considerations as they may drastically influence the models performance. The results indicate that more comprehensive research is required to optimally deploy quantum federated learning on a potential quantum internet.
+---------------------------------------
+Result 7:
+Score: 0.95289415
+Paper: http://localhost:8080/all_htmls/2307.07012.html
+Title: [2307.07012] CryptoQFL: Quantum Federated Learning on Encrypted Data
+Abstract: Abstract Recent advancements in Quantum Neural Networks (QNNs) have demonstrated theoretical and experimental performance superior to their classical counterparts in a wide range of applications. However, existing cent
+ralized QNNs cannot solve many real-world problems because collecting large amounts of training data to a common public site is time-consuming and, more importantly, violates data privacy. Federated Learning (FL) is an emerging 
+distributed machine learning framework that allows collaborative model training on decentralized data residing on multiple devices without breaching data privacy. Some initial attempts at Quantum Federated Learning (QFL) either 
+only focus on improving the QFL performance or rely on a trusted quantum server that fails to preserve data privacy. In this work, we propose CryptoQFL, a QFL framework that allows distributed QNN training on encrypted data. Cry
+ptoQFL is (1) secure, because it allows each edge to train a QNN with local private data, and encrypt its updates using quantum homomorphic encryption before sending them to the central quantum server; (2) communication-efficien
+t, as CryptoQFL quantize local gradient updates to ternary values, and only communicate non-zero values to the server for aggregation; and (3) computation-efficient, as CryptoQFL presents an efficient quantum aggregation circuit with significantly reduced latency compared to state-of-the-art approaches.
+---------------------------------------
+Result 8:
+Score: 0.93885434
+Paper: http://localhost:8080/all_htmls/2310.15084.html
+Title: [2310.15084] Quantum Federated Learning with Quantum Networks
+Abstract: Abstract A major concern of deep learning models is the large amount of data that is required to build and train them, much of which is reliant on sensitive and personally identifiable information that is vulnerable to
+ access by third parties. Ideas of using the quantum internet to address this issue have been previously proposed, which would enable fast and completely secure online communications. Previous work has yielded a hybrid quantum-c
+lassical transfer learning scheme for classical data and communication with a hub-spoke topology. While quantum communication is secure from eavesdrop attacks and no measurements from quantum to classical translation, due to no 
+cloning theorem, hub-spoke topology is not ideal for quantum communication without quantum memory. Here we seek to improve this model by implementing a decentralized ring topology for the federated learning scheme, where each cl
+ient is given a portion of the entire dataset and only performs training on that set. We also demonstrate the first successful use of quantum weights for quantum federated learning, which allows us to perform our training entirely in quantum.
+---------------------------------------
+Result 9:
+Score: 0.8687459
+Paper: http://localhost:8080/all_htmls/2409.05770.html
+Title: [2409.05770] Consensus-based Distributed Quantum Kernel Learning for Speech Recognition *The first two authors contributed equally to this work.
+Abstract: Abstract This paper presents a Consensus-based Distributed Quantum Kernel Learning (CDQKL) framework aimed at improving speech recognition through distributed quantum computing.CDQKL addresses the challenges of scalabi
+lity and data privacy in centralized quantum kernel learning. It does this by distributing computational tasks across quantum terminals, which are connected through classical channels. This approach enables the exchange of model
+ parameters without sharing local training data, thereby maintaining data privacy and enhancing computational efficiency. Experimental evaluations on benchmark speech emotion recognition datasets demonstrate that CDQKL achieves 
+competitive classification accuracy and scalability compared to centralized and local quantum kernel learning models. The distributed nature of CDQKL offers advantages in privacy preservation and computational efficiency, making it suitable for data-sensitive fields such as telecommunications, automotive, and finance. The findings suggest that CDQKL can effectively leverage distributed quantum computing for large-scale machine-learning tasks.
+---------------------------------------
+Result 10:
+Score: 0.86759734
+Paper: http://localhost:8080/all_htmls/2103.12010.html
+Title: [2103.12010] Federated Quantum Machine Learning
+Abstract: Abstract Distributed training across several quantum computers could significantly improve the training time and if we could share the learned model, not the data, it could potentially improve the data privacy as the t
+raining would happen where the data is located. However, to the best of our knowledge, no work has been done in quantum machine learning (QML) in federation setting yet. In this work, we present the federated training on hybrid 
+quantum-classical machine learning models although our framework could be generalized to pure quantum machine learning model. Specifically, we consider the quantum neural network (QNN) coupled with classical pre-trained convolut
+ional model. Our distributed federated learning scheme demonstrated almost the same level of trained model accuracies and yet significantly faster distributed training. It demonstrates a promising future research direction for scaling and privacy aspects.
+---------------------------------------
+Tempo impiegato per l'esecuzione del test: 64973 ms
+
+
+
+Test 8 - Query: +content:dynamic programming -content:greedy algorithms
+
+
+
+
+
+Result 1:
+Score: 1.8537767
+Paper: http://localhost:8080/all_htmls/2108.07909v3.html
+Title: [2108.07909] A comparative study of universal quantum computing models: towards a physical unification
+Abstract: Abstract Quantum computing has been a fascinating research field in quantum physics. Recent progresses motivate us to study in depth the universal quantum computing models (UQCM), which lie at the foundation of quantum
+ computing and have tight connections with fundamental physics. Although being developed decades ago, a physically concise principle or picture to formalize and understand UQCM is still lacking. This is challenging given the div
+ersity of still-emerging models, but important to understand the difference between classical and quantum computing. In this work, we carried out a primary attempt to unify UQCM by classifying a few of them as two categories, he
+nce making a table of models. With such a table, some known models or schemes appear as hybridization or combination of models, and more importantly, it leads to new schemes that have not been explored yet. Our study of UQCM also leads to some insights into quantum algorithms. This work reveals the importance and feasibility of systematic study of computing models.
+---------------------------------------
+Result 2:
+Score: 1.8100471
+Paper: http://localhost:8080/all_htmls/2410.05095.html
+Title: Towards a Modern and Lightweight Rendering Engine for Dynamic Robotic Simulations
+Abstract: Abstract Interactive dynamic simulators are an accelerator for developing novel robotic control algorithms and complex systems involving humans and robots. In user training and synthetic data generation applications, a
+ high-fidelity visualization of the simulation is essential. Visual fidelity is dependent on the quality of the computer graphics algorithms used to render the simulated scene. Furthermore, the rendering algorithms must be imple
+mented on the graphics processing unit (GPU) to achieve real-time performance, requiring the use of a graphics application programming interface (API). This paper presents a performance-focused and lightweight rendering engine s
+upporting the Vulkan graphics API. The engine is designed to modernize the legacy rendering pipeline of Asynchronous Multi-Body Framework (AMBF), a dynamic simulation framework used extensively for interactive robotics simulatio
+n development. This new rendering engine implements graphical features such as physically based rendering (PBR), anti-aliasing, and ray-traced shadows, significantly improving the image quality of AMBF. Computational experiments show that the engine can render a simulated scene with over seven million triangles while maintaining GPU computation times within two milliseconds.
+---------------------------------------
+Result 3:
+Score: 1.8093863
+Paper: http://localhost:8080/all_htmls/2409.11442.html
+Title: [2409.11442] A Green Multi-Attribute Client Selection for Over-The-Air Federated Learning: A Grey-Wolf-Optimizer Approach
+Abstract: Abstract. Federated Learning (FL) has gained attention across various industries for its capability to train machine learning models without centralizing sensitive data. While this approach offers significant benefits 
+such as privacy preservation and decreased communication overhead, it presents several challenges, including deployment complexity and interoperability issues, particularly in heterogeneous scenarios or resource-constrained envi
+ronments. Over-the-air (OTA) FL was introduced to tackle these challenges by disseminating model updates without necessitating direct device-to-device connections or centralized servers. However, OTA-FL brought forth limitations
+ associated with heightened energy consumption and network latency. In this paper, we propose a multi-attribute client selection framework employing the grey wolf optimizer (GWO) to strategically control the number of participan
+ts in each round and optimize the OTA-FL process while considering accuracy, energy, delay, reliability, and fairness constraints of participating devices. We evaluate the performance of our multi-attribute client selection appr
+oach in terms of model loss minimization, convergence time reduction, and energy efficiency. In our experimental evaluation, we assessed and compared the performance of our approach against the existing state-of-the-art methods.
+ Our results demonstrate that the proposed GWO-based client selection outperforms these baselines across various metrics. Specifically, our approach achieves a notable reduction in model loss, accelerates convergence time, and enhances energy efficiency while maintaining high fairness and reliability indicators.
+---------------------------------------
+Result 4:
+Score: 1.8081552
+Paper: http://localhost:8080/all_htmls/2408.15866.html
+Title: Retrieval-Augmented Instruction Tuning for Automated Process Engineering Calculations : A Tool-Chaining Problem-Solving Framework with Attributable Reflection
+Abstract: Abstract The current technology landscape lacks a foundational AI model for solving process engineering calculations. In this work, we introduce a novel autonomous agent framework leveraging Retrieval-Augmented Instruc
+tion-Tuning (RAIT) to enhance open, customizable small code language models (SLMs) for these calculations. By combining instruction-tuned code SLMs with Retrieval-Augmented Code Generation (RACG) using external tools, the agent 
+generates, debugs, and optimizes code from natural language specifications. Our approach addresses the limitations of the current lack of a foundational AI model for specialized process engineering tasks and offers benefits of e
+xplainability, knowledge-editing, and cost-effectiveness. Additionally, we curate custom datasets of chemical and process engineering problems and solutions to overcome data scarcity. Experimental results show that our framework matches the performance of large-scale proprietary models on benchmark datasets, proving its effectiveness and usability.
+---------------------------------------
+Result 5:
+Score: 1.7923443
+Paper: http://localhost:8080/all_htmls/2408.05379.html
+Title: Temporal Analysis and Repair of Flaky Dockerfiles
+Abstract: Abstract Dockerfile flakiness, characterized by inconsistent build behavior without Dockerfile or project source code changes, poses significant challenges in Continuous Integration and Delivery (CI/CD) pipelines. This
+ issue can lead to unreliable deployments and increased debugging efforts, yet it remains underexplored in current research. We conduct a systematic analysis of Dockerfile flakiness, presenting a comprehensive taxonomy of common
+ flakiness categories, including dependency-related errors and server connectivity issues. Furthermore, we introduce FlakiDock, a tool leveraging large language models and retrieval-augmented generation techniques with dynamic a
+nalysis and an iterative feedback loop to automatically repair flaky Dockerfiles. Our evaluation shows that FlakiDock achieves a 73.55% repair accuracy, outperforming existing tools such as PARFUM by 12,581% and GPT-4-based prompting by 94.63%. These results underscore the effectiveness of FlakiDock in addressing Dockerfile flakiness and improving build reliability.
+---------------------------------------
+Result 6:
+Score: 1.7917681
+Paper: http://localhost:8080/all_htmls/2406.17907v2.html
+Title: Delta-V-Optimal Centralized Guidance Strategy For Under-actuated N-Satellite Formations
+Abstract: Abstract This paper addresses the computation of Delta-V-optimal, safe, relative orbit reconfigurations for satellite formations in a centralized fashion. The formations under consideration comprise an uncontrolled chi
+ef spacecraft flying with an arbitrary number, N?Nitalic_N , of deputy satellites, where each deputy is equipped with a single electric thruster. Indeed, this represents a technological solution that is becoming widely employed 
+by the producers of small-satellite platforms. While adopting a single electric thruster does reduce the required power, weight, and size of the orbit control system, it comes at the cost of rendering the satellite under-actuate
+d. In this setting, the satellite can provide a desired thrust vector only after an attitude maneuver is carried out to redirect the thruster nozzle opposite to the desired thrust direction. In order to further extend the applic
+ability range of such under-actuated platforms, guidance strategies are developed to support different reconfiguration scenarios for N?Nitalic_N -satellite formations. This paper starts from a classical non-convex quadratically 
+constrained trajectory optimization formulation, which passes through multiple simplifications and approximations to arrive to two novel convex formulations, namely a second-order cone programming formulation, and a linear progr
+amming one. Out of five guidance formulations proposed in this article, the most promising three were compared through an extensive benchmark analysis that is applied to fifteen of the most widely-used solvers. This benchmark experiment provides information about the key distinctions between the different problem formulations, and under which conditions each one of them can be recommended.
+---------------------------------------
+Result 7:
+Score: 1.7915387
+Paper: http://localhost:8080/all_htmls/2407.20241v1.html
+Title: NudgeRank: Digital Algorithmic Nudging for Personalized Health
+Abstract: Abstract. In this paper we describe NudgeRank?, an innovative digital algorithmic nudging system designed to foster positive health behaviors on a population-wide scale. Utilizing a novel combination of Graph Neural Ne
+tworks augmented with an extensible Knowledge Graph, this Recommender System is operational in production, delivering personalized and context-aware nudges to over 1.1 million care recipients daily. This enterprise deployment ma
+rks one of the largest AI-driven health behavior change initiatives, accommodating diverse health conditions and wearable devices. Rigorous evaluation reveals statistically significant improvements in health outcomes, including 
+a 6.17% increase in daily steps and 7.61% more exercise minutes. Moreover, user engagement and program enrollment surged, with a 13.1% open rate compared to baseline systems? 4%. Demonstrating scalability and reliability, NudgeRank? operates efficiently on commodity compute resources while maintaining automation and observability standards essential for production systems.
+---------------------------------------
+Result 8:
+Score: 1.7765517
+Paper: http://localhost:8080/all_htmls/2408.06304v3.html
+Title: Control-Flow Attestation: Concepts, Solutions, and Open Challenges
+Abstract: Abstract Control-flow attestation unifies the worlds of control-flow integrity and platform attestation by measuring and reporting a target?s run-time behaviour to a verifier. Trust assurances in the target are provide
+d by testing whether its execution follows an authorised control-flow path. The problem has been explored in various settings, such as assessing the trustworthiness of cloud platforms, cyber-physical systems, and Internet of Thi
+ngs devices. Despite a significant number of proposals being made in recent years, the area remains fragmented, addressing different adversarial behaviours, verification paradigms, and deployment challenges. In this paper, we pr
+esent the first survey of control-flow attestation, examining the core ideas and solutions in state-of-the-art schemes. In total, we survey over 30 papers published between 2016?2024, consolidate and compare their key features, and pose several challenges and recommendations for future research in the area.
+---------------------------------------
+Result 9:
+Score: 1.776445
+Paper: http://localhost:8080/all_htmls/ar5iv_article_2310.14201.html
+Title:
+Abstract: Abstract Prompt Engineering (PE) has emerged as a critical technique for guiding Large Language Models (LLMs) in solving intricate tasks. Its importance is highlighted by its potential to significantly enhance the effi
+ciency and effectiveness of human-machine interaction. As tasks grow increasingly complex, recent advanced PE methods have extended beyond the limitations of single-round interactions to embrace multi-round interactions, which a
+llows for a deeper and more nuanced engagement with LLMs. In this paper, we propose an optimal control framework tailored for multi-round interactions with LLMs. This framework provides a unified mathematical structure that not 
+only systematizes the existing PE methods but also sets the stage for rigorous analytical improvements. Furthermore, we extend this framework to include PE via ensemble methods and multi-agent collaboration, thereby enlarging th
+e scope of applicability. By adopting an optimal control perspective, we offer fresh insights into existing PE methods and highlight theoretical challenges that warrant future research. Besides, our work lays a foundation for the development of more effective and interpretable PE methods.
+---------------------------------------
+Result 10:
+Score: 1.7742436
+Paper: http://localhost:8080/all_htmls/2306.14090.html
+Title: [2306.14090] Federated Learning Approach for Distributed Ransomware Analysis
+Abstract: Abstract Ransomware is a form of malware that uses encryption methods to prevent legitimate users from accessing their data files. To date, many ransomware families have been released, causing immense damage and financ
+ial losses for private users, corporations, and governments. As a result, researchers have proposed a range of ransomware detection schemes using various machine learning (ML) methods to analyze binary files and action sequences
+. However as this threat continues to proliferate, it is becoming increasingly difficult to collect and analyze massive amounts of ransomware executables and trace data at a common site (due to data privacy and scalability conce
+rns). Hence this paper presents a novel distributed ransomware analysis (DRA) solution for detection and attribution using the decentralized federated learning (FL) framework. Detailed performance evaluation is then conducted for the case of static analysis with rapid/lightweight feature extraction using an up-to-date ransomware repository. Overall results confirm the effectiveness the FL-based solution.
+---------------------------------------
+Tempo impiegato per l'esecuzione del test: 65184 ms
+
+
+
+Test 9 - Query: Deep learning techniques
+
+
+
+
+
+Result 1:
+Score: 3.111771
+Paper: http://localhost:8080/all_htmls/2408.07828v1.html
+Title: Space-scale Exploration of the Poor Reliability of Deep Learning Models: the Case of the Remote Sensing of Rooftop Photovoltaic Systems
+Abstract: Abstract Photovoltaic (PV) energy grows rapidly and is crucial for the decarbonization of electric systems. However, centralized registries recording the technical characteristifs of rooftop PV systems are often missin
+g, making it difficult to accurately monitor this growth. The lack of monitoring could threaten the integration of PV energy into the grid. To avoid this situation, the remote sensing of rooftop PV systems using deep learning em
+erged as a promising solution. However, existing techniques are not reliable enough to be used by public authorities or transmission system operators (TSOs) to construct up-to-date statistics on the rooftop PV fleet. The lack of
+ reliability comes from the fact that deep learning models are sensitive to distribution shifts. This work proposes a comprehensive evaluation of the effects of distribution shifts on the classification accuracy of deep learning
+ models trained to detect rooftop PV panels on overhead imagery. We construct a benchmark to isolate the sources of distribution shift and introduce a novel methodology that leverages explainable artificial intelligence (XAI) an
+d decomposition of the input image and model?s decision in terms of scales to understand how distribution shifts affect deep learning models. Finally, based on our analysis, we introduce a data augmentation technique meant to im
+prove the robustness of deep learning classifiers to varying acquisition conditions. We show that our proposed approach outperforms competing methods. We discuss some practical recommendations for mapping PV systems using overhead imagery and deep learning models.
+---------------------------------------
+Result 2:
+Score: 3.0944371
+Paper: http://localhost:8080/all_htmls/1808.02455.html
+Title: [1808.02455] Data augmentation using synthetic data for time series classification with deep residual networks
+Abstract: Abstract Data augmentation in deep neural networks is the process of generating artificial data in order to reduce the variance of the classifier with the goal to reduce the number of errors. This idea has been shown t
+o improve deep neural network?s generalization capabilities in many computer vision tasks such as image recognition and object localization. Apart from these applications, deep Convolutional Neural Networks (CNNs) have also rece
+ntly gained popularity in the Time Series Classification (TSC) community. However, unlike in image recognition problems, data augmentation techniques have not yet been investigated thoroughly for the TSC task. This is surprising
+ as the accuracy of deep learning models for TSC could potentially be improved, especially for small datasets that exhibit overfitting, when a data augmentation method is adopted. In this paper, we fill this gap by investigating
+ the application of a recently proposed data augmentation technique based on the Dynamic Time Warping distance, for a deep learning model for TSC. To evaluate the potential of augmenting the training set, we performed extensive 
+experiments using the UCR TSC benchmark. Our preliminary experiments reveal that data augmentation can drastically increase deep CNN?s accuracy on some datasets and significantly improve the deep model?s accuracy when the method is used in an ensemble approach.
+---------------------------------------
+Result 3:
+Score: 3.072925
+Paper: http://localhost:8080/all_htmls/2408.16442.html
+Title: [2408.16442] Integrating Features for Recognizing Human Activities through Optimized Parameters in Graph Convolutional Networks and Transformer Architectures
+Abstract: Abstract Human activity recognition is a major field of study that employs computer vision, machine vision, and deep learning techniques to categorize human actions. The field of deep learning has made significant prog
+ress, with architectures that are extremely effective at capturing human dynamics. This study emphasizes the influence of feature fusion on the accuracy of activity recognition. This technique addresses the limitation of convent
+ional models, which face difficulties in identifying activities because of their limited capacity to understand spatial and temporal features. The technique employs sensory data obtained from four publicly available datasets: Hu
+GaDB, PKU-MMD, LARa, and TUG. The accuracy and F1-score of two deep learning models, specifically a Transformer model and a Parameter-Optimized Graph Convolutional Network (PO-GCN), were evaluated using these datasets. The featu
+re fusion technique integrated the final layer features from both models and inputted them into a classifier. Empirical evidence demonstrates that PO-GCN outperforms standard models in activity recognition. HuGaDB demonstrated a
+ 2.3% improvement in accuracy and a 2.2% increase in F1-score. TUG showed a 5% increase in accuracy and a 0.5% rise in F1-score. On the other hand, LARa and PKU-MMD achieved lower accuracies of 64% and 69% respectively. This indicates that the integration of features enhanced the performance of both the Transformer model and PO-GCN.
+---------------------------------------
+Result 4:
+Score: 2.9402142
+Paper: http://localhost:8080/all_htmls/1705.03865v2.html
+Title: [1705.03865] Survey of Visual Question Answering: Datasets and Techniques
+Abstract: Abstract Visual question answering (or VQA) is a new and exciting problem that combines natural language processing and computer vision techniques. We present a survey of the various datasets and models that have been 
+used to tackle this task. The first part of this survey details the various datasets for VQA and compares them along some common factors. The second part of this survey details the different approaches for VQA, classified into f
+our types: non-deep learning models, deep learning models without attention, deep learning models with attention, and other models which do not fit into the first three. Finally, we compare the performances of these approaches and provide some directions for future work.
+---------------------------------------
+Result 5:
+Score: 2.9356616
+Paper: http://localhost:8080/all_htmls/2107.12603.html
+Title: [2107.12603] Federated Learning Meets Natural Language Processing: A Survey
+Abstract: Abstract Federated Learning aims to learn machine learning models from multiple decentralized edge devices (e.g. mobiles) or servers without sacrificing local data privacy. Recent Natural Language Processing techniques
+ rely on deep learning and large pre-trained language models. However, both big deep neural and language models are trained with huge amounts of data which often lies on the server side. Since text data is widely originated from
+ end users, in this work, we look into recent NLP models and techniques which use federated learning as the learning framework. Our survey discusses major challenges in federated natural language processing, including the algori
+thm challenges, system challenges as well as the privacy issues. We also provide a critical review of the existing Federated NLP evaluation methods and tools. Finally, we highlight the current research gaps and future directions.
+---------------------------------------
+Result 6:
+Score: 2.866977
+Paper: http://localhost:8080/all_htmls/1809.07857.html
+Title: [1809.07857] In-Edge AI: Intelligentizing Mobile Edge Computing, Caching and Communication by Federated Learning
+Abstract: Abstract Recently, along with the rapid development of mobile communication technology, edge computing theory and techniques have been attracting more and more attentions from global researchers and engineers, which ca
+n significantly bridge the capacity of cloud and requirement of devices by the network edges, and thus can accelerate the content deliveries and improve the quality of mobile services. In order to bring more intelligence to the 
+edge systems, compared to traditional optimization methodology, and driven by the current deep learning techniques, we propose to integrate the Deep Reinforcement Learning techniques and Federated Learning framework with the mob
+ile edge systems, for optimizing the mobile edge computing, caching and communication. And thus, we design the ?In-Edge AI? framework in order to intelligently utilize the collaboration among devices and edge nodes to exchange t
+he learning parameters for a better training and inference of the models, and thus to carry out dynamic system-level optimization and application-level enhancement while reducing the unnecessary system communication load. ?In-Ed
+ge AI? is evaluated and proved to have near-optimal performance but relatively low overhead of learning, while the system is cognitive and adaptive to the mobile communication systems. Finally, we discuss several related challenges and opportunities for unveiling a promising upcoming future of ?In-Edge AI?.
+---------------------------------------
+Result 7:
+Score: 2.8427725
+Paper: http://localhost:8080/all_htmls/2204.04282v1.html
+Title: [2204.04282] Classification of Natural Language Processing Techniques for Requirements Engineering
+Abstract: Abstract Research in applying natural language processing (NLP) techniques to requirements engineering (RE) tasks spans more than 40 years, from initial efforts carried out in the 1980s to more recent attempts with mac
+hine learning (ML) and deep learning (DL) techniques. However, in spite of the progress, our recent survey shows that there is still a lack of systematic understanding and organization of commonly used NLP techniques in RE. We b
+elieve one hurdle facing the industry is lack of shared knowledge of NLP techniques and their usage in RE tasks. In this paper, we present our effort to synthesize and organize 57 most frequently used NLP techniques in RE. We cl
+assify these NLP techniques in two ways: first, by their NLP tasks in typical pipelines and second, by their linguist analysis levels. We believe these two ways of classification are complementary, contributing to a better understanding of the NLP techniques in RE and such understanding is crucial to the development of better NLP tools for RE.
+---------------------------------------
+Result 8:
+Score: 2.838771
+Paper: http://localhost:8080/all_htmls/2407.14386v1.html
+Title: Frontiers of Deep Learning: From Novel Application to Real-World Deployment
+Abstract: Abstract Deep learning continues to re-shape numerous fields, from natural language processing and imaging to data analytics and recommendation systems. This report studies two research papers that represent recent pro
+gress on deep learning from two largely different aspects: The first paper applied the transformer networks, which are typically used in language models, to improve the quality of synthetic aperture radar image by effectively re
+ducing the speckle noise. The second paper presents an in-storage computing design solution to enable cost-efficient and high-performance implementations of deep learning recommendation systems. In addition to summarizing each p
+aper in terms of motivation, key ideas and techniques, and evaluation results, this report also presents thoughts and discussions about possible future research directions. By carrying out in-depth study on these two representative papers and related references, this doctoral candidate has developed better understanding on the far-reaching impact and efficient implementation of deep learning models.
+---------------------------------------
+Result 9:
+Score: 2.8293772
+Paper: http://localhost:8080/all_htmls/2408.05761.html
+Title: [2408.05761] Personalized Federated Learning for improving radar based precipitation nowcasting on heterogeneous areas
+Abstract: Abstract 00footnotetext: Accepted for publication in Earth Science Informatics The increasing generation of data in different areas of life, such as the environment, highlights the need to explore new techniques for pr
+ocessing and exploiting data for useful purposes. In this context, artificial intelligence techniques, especially through deep learning models, are key tools to be used on the large amount of data that can be obtained, for examp
+le, from weather radars. In many cases, the information collected by these radars is not open, or belongs to different institutions, thus needing to deal with the distributed nature of this data. In this work, the applicability 
+of a personalized federated learning architecture, which has been called adapFL, on distributed weather radar images is addressed. To this end, given a single available radar covering 400 km in diameter, the captured images are 
+divided in such a way that they are disjointly distributed into four different federated clients. The results obtained with adapFL are analyzed in each zone, as well as in a central area covering part of the surface of each of t
+he previously distributed areas. The ultimate goal of this work is to study the generalization capability of this type of learning technique for its extrapolation to use cases in which a representative number of radars is availa
+ble, whose data can not be centralized due to technical, legal or administrative concerns. The results of this preliminary study indicate that the performance obtained in each zone with the adapFL approach allows improving the results of the federated learning approach, the individual deep learning models and the classical Continuity Tracking Radar Echoes by Correlation approach.
+---------------------------------------
+Result 10:
+Score: 2.7980208
+Paper: http://localhost:8080/all_htmls/2012.06974.html
+Title: [2012.06974] Federated Mimic Learning for Privacy Preserving Intrusion Detection
+Abstract: Abstract Internet of things (IoT) devices are prone to attacks due to the limitation of their privacy and security components. These attacks vary from exploiting backdoors to disrupting the communication network of the
+ devices. Intrusion Detection Systems (IDS) play an essential role in ensuring information privacy and security of IoT devices against these attacks. Recently, deep learning-based IDS techniques are becoming more prominent due t
+o their high classification accuracy. However, conventional deep learning techniques jeopardize user privacy due to the transfer of user data to a centralized server. Federated learning (FL) is a popular privacy-preserving decen
+tralized learning method. FL enables training models locally at the edge devices and transferring local models to a centralized server instead of transferring sensitive data. Nevertheless, FL can suffer from reverse engineering 
+ML attacks that can learn information about the user?s data from model. To overcome the problem of reverse engineering, mimic learning is another way to preserve the privacy of ML-based IDS. In mimic learning, a student model is
+ trained with the public dataset, which is labeled with the teacher model that is trained by sensitive user data. In this work, we propose a novel approach that combines the advantages of FL and mimic learning, namely federated 
+mimic learning to create a distributed IDS while minimizing the risk of jeopardizing users? privacy, and benchmark its performance compared to other ML-based IDS techniques using NSL-KDD dataset. Our results show that we can achieve 98.11% detection accuracy with federated mimic learning.
+---------------------------------------
+Tempo impiegato per l'esecuzione del test: 26612 ms
+
+
+
+Test 10 - Query: P. Richtárik
+
+
+
+
+
+Result 1:
+Score: 2.275989
+Paper: http://localhost:8080/all_htmls/2210.13277.html
+Title: [2210.13277] Provably Doubly Accelerated Federated Learning: The First Theoretically Successful Combination of Local Training and Communication Compression
+Abstract: Abstract In federated learning, a large number of users are involved in a global learning task, in a collaborative way. They alternate local computations and two-way communication with a distant orchestrating server. C
+ommunication, which can be slow and costly, is the main bottleneck in this setting. To reduce the communication load and therefore accelerate distributed gradient descent, two strategies are popular: 1) communicate less frequent
+ly; that is, perform several iterations of local computations between the communication rounds; and 2) communicate compressed information instead of full-dimensional vectors. We propose the first algorithm for distributed optimi
+zation and federated learning, which harnesses these two strategies jointly and converges linearly to an exact solution in the strongly convex setting, with a doubly accelerated rate: our algorithm benefits from the two acceleration mechanisms provided by local training and compression, namely a better dependency on the condition number of the functions and on the dimension of the model, respectively.
+---------------------------------------
+Result 2:
+Score: 2.2742295
+Paper: http://localhost:8080/all_htmls/2207.04338.html
+Title: [2207.04338] Variance Reduced ProxSkip: Algorithm, Theory and Application to Federated Learning
+Abstract: Abstract We study distributed optimization methods based on the local training (LT) paradigm: achieving communication efficiency by performing richer local gradient-based training on the clients before parameter averag
+ing. Looking back at the progress of the field, we identify 5 generations of LT methods: 1) heuristic, 2) homogeneous, 3) sublinear, 4) linear, and 5) accelerated. The 5th generation, initiated by the ProxSkip method of Mishchen
+ko et al. [2022] and its analysis, is characterized by the first theoretical confirmation that LT is a communication acceleration mechanism. Inspired by this recent progress, we contribute to the 5th generation of LT methods by 
+showing that it is possible to enhance them further using variance reduction. While all previous theoretical results for LT methods ignore the cost of local work altogether, and are framed purely in terms of the number of commun
+ication rounds, we show that our methods can be substantially faster in terms of the total training cost than the state-of-the-art method ProxSkip in theory and practice in the regime when local computation is sufficiently expensive. We characterize this threshold theoretically, and confirm our theoretical predictions with empirical results.
+---------------------------------------
+Result 3:
+Score: 2.2741416
+Paper: http://localhost:8080/all_htmls/2112.13097.html
+Title: [2112.13097] Faster Rates for Compressed Federated Learning with Client-Variance Reduction
+Abstract: Abstract Due to the communication bottleneck in distributed and federated learning applications, algorithms using communication compression have attracted significant attention and are widely used in practice. Moreover
+, the huge number, high heterogeneity and limited availability of clients result in high client-variance. This paper addresses these two issues together by proposing compressed and client-variance reduced methods COFIG and FRECO
+N. We prove an O((1+?)3/2NS?2+(1+?)N2/3S?2)?superscript1?32??superscriptitalic-?21?superscript?23?superscriptitalic-?2O(\frac{(1+\omega)^{3/2}\sqrt{N}}{S\epsilon^{2}}+\frac{(1+\omega)N^{2/3}}{S\epsilon^{2}}) bound on the number 
+of communication rounds of COFIG in the nonconvex setting, where N?N is the total number of clients, S?S is the number of clients participating in each round, ?italic-?\epsilon is the convergence error, and ??\omega is the varia
+nce parameter associated with the compression operator. In case of FRECON, we prove an O((1+?)NS?2)?1???superscriptitalic-?2O(\frac{(1+\omega)\sqrt{N}}{S\epsilon^{2}}) bound on the number of communication rounds. In the convex s
+etting, COFIG converges within O((1+?)NS?)?1???italic-?O(\frac{(1+\omega)\sqrt{N}}{S\epsilon}) communication rounds, which, to the best of our knowledge, is also the first convergence result for compression schemes that do not c
+ommunicate with all the clients in each round. We stress that neither COFIG nor FRECON needs to communicate with all the clients, and they enjoy the first or faster convergence results for convex and nonconvex federated learning in the regimes considered. Experimental results point to an empirical superiority of COFIG and FRECON over existing baselines.
+---------------------------------------
+Result 4:
+Score: 2.269608
+Paper: http://localhost:8080/all_htmls/2002.05516.html
+Title: [2002.05516] Federated Learning of a Mixture of Global and Local Models
+Abstract: Abstract We propose a new optimization formulation for training federated learning models. The standard formulation has the form of an empirical risk minimization problem constructed to find a single global model train
+ed from the private data stored across all participating devices. In contrast, our formulation seeks an explicit trade-off between this traditional global model and the local models, which can be learned by each device from its 
+own private data without any communication. Further, we develop several efficient variants of SGD (with and without partial participation and with and without variance reduction) for solving the new formulation and prove communi
+cation complexity guarantees. Notably, our methods are similar but not identical to federated averaging / local SGD, thus shedding some light on the role of local steps in federated learning. In particular, we are the first to i) show that local steps can improve communication for problems with heterogeneous data, and ii) point out that personalization yields reduced communication complexity.
+---------------------------------------
+Result 5:
+Score: 2.2692597
+Paper: http://localhost:8080/all_htmls/2305.13170.html
+Title: [2305.13170] Explicit Personalization and Local Training: Double Communication Acceleration in Federated Learning
+Abstract: Abstract Federated Learning is an evolving machine learning paradigm, in which multiple clients perform computations based on their individual private data, interspersed by communication with a remote server. A common 
+strategy to curtail communication costs is Local Training, which consists in performing multiple local stochastic gradient descent steps between successive communication rounds. However, the conventional approach to local traini
+ng overlooks the practical necessity for client-specific personalization, a technique to tailor local models to individual needs. We introduce Scafflix, a novel algorithm that efficiently integrates explicit personalization with local training. This innovative approach benefits from these two techniques, thereby achieving doubly accelerated communication, as we demonstrate both in theory and practice.
+---------------------------------------
+Result 6:
+Score: 2.2684164
+Paper: http://localhost:8080/all_htmls/2302.03662.html
+Title: [2302.03662] Federated Learning with Regularized Client Participation
+Abstract: Abstract Federated Learning (FL) is a distributed machine learning approach where multiple clients work together to solve a machine learning task. One of the key challenges in FL is the issue of partial participation, 
+which occurs when a large number of clients are involved in the training process. The traditional method to address this problem is randomly selecting a subset of clients at each communication round. In our research, we propose 
+a new technique and design a novel regularized client participation scheme. Under this scheme, each client joins the learning process every R?R communication rounds, which we refer to as a meta epoch. We have found that this par
+ticipation scheme leads to a reduction in the variance caused by client sampling. Combined with the popular FedAvg algorithm (McMahan et al., 2017), it results in superior rates under standard assumptions. For instance, the opti
+mization term in our main convergence bound decreases linearly with the product of the number of communication rounds and the size of the local dataset of each client, and the statistical term scales with step size quadratically
+ instead of linearly (the case for client sampling with replacement), leading to better convergence rate ?(1/T2)?1superscript?2{\cal O}(\nicefrac{{1}}{{T^{2}}}) compared to ?(1/T)?1?{\cal O}(\nicefrac{{1}}{{T}}) , where T?T is t
+he total number of communication rounds. Furthermore, our results permit arbitrary client availability as long as each client is available for training once per each meta epoch. Finally, we corroborate our results with experiments.
+---------------------------------------
+Result 7:
+Score: 2.2678537
+Paper: http://localhost:8080/all_htmls/2206.09888.html
+Title: [2206.09888] SoteriaFL: A Unified Framework for Private Federated Learning with Communication Compression
+Abstract: Abstract To enable large-scale machine learning in bandwidth-hungry environments such as wireless networks, significant progress has been made recently in designing communication-efficient federated learning algorithms
+ with the aid of communication compression. On the other end, privacy-preserving, especially at the client level, is another important desideratum that has not been addressed simultaneously in the presence of advanced communicat
+ion compression techniques yet. In this paper, we propose a unified framework that enhances the communication efficiency of private federated learning with communication compression. Exploiting both general compression operators
+ and local differential privacy, we first examine a simple algorithm that applies compression directly to differentially-private stochastic gradient descent, and identify its limitations. We then propose a unified framework Sote
+riaFL for private federated learning, which accommodates a general family of local gradient estimators including popular stochastic variance-reduced gradient methods and the state-of-the-art shifted compression scheme. We provid
+e a comprehensive characterization of its performance trade-offs in terms of privacy, utility, and communication complexity, where SoteriaFL is shown to achieve better communication complexity without sacrificing privacy nor utility than other private federated learning algorithms without communication compression.
+---------------------------------------
+Result 8:
+Score: 2.2644024
+Paper: http://localhost:8080/all_htmls/2404.13328.html
+Title: [2404.13328] Accelerated Methods with Compression for Horizontal and Vertical Federated Learning
+Abstract: Abstract Distributed optimization algorithms have emerged as a superior approaches for solving machine learning problems. To accommodate the diverse ways in which data can be stored across devices, these methods must b
+e adaptable to a wide range of situations. As a result, two orthogonal regimes of distributed algorithms are distinguished: horizontal and vertical. During parallel training, communication between nodes can become a critical bot
+tleneck, particularly for high-dimensional and over-parameterized models. Therefore, it is crucial to enhance current methods with strategies that minimize the amount of data transmitted during training while still achieving a m
+odel of similar quality. This paper introduces two accelerated algorithms with various compressors, working in the regime of horizontal and vertical data division. By utilizing a momentum and variance reduction technique from th
+e Katyusha algorithm, we were able to achieve acceleration and demonstrate one of the best asymptotics for the horizontal case. Additionally, we provide one of the first theoretical convergence guarantees for the vertical regime. Our experiments involved several compressor operators, including RandK and PermK, and we were able to demonstrate superior practical performance compared to other popular approaches.
+---------------------------------------
+Result 9:
+Score: 2.2638676
+Paper: http://localhost:8080/all_htmls/2004.01442.html
+Title: [2004.01442] From Local SGD to Local Fixed-Point Methods for Federated Learning
+Abstract: Abstract Most algorithms for solving optimization problems or finding saddle points of convex?concave functions are fixed-point algorithms. In this work we consider the generic problem of finding a fixed point of an av
+erage of operators, or an approximation thereof, in a distributed setting. Our work is motivated by the needs of federated learning. In this context, each local operator models the computations done locally on a mobile device. W
+e investigate two strategies to achieve such a consensus: one based on a fixed number of local steps, and the other based on randomized computations. In both cases, the goal is to limit communication of the locally-computed variables, which is often the bottleneck in distributed frameworks. We perform convergence analysis of both methods and conduct a number of experiments highlighting the benefits of our approach.
+---------------------------------------
+Result 10:
+Score: 2.2635713
+Paper: http://localhost:8080/all_htmls/2302.00543.html
+Title: [2302.00543] DoCoFL: Downlink Compression for Cross-Device Federated Learning
+Abstract: Abstract Many compression techniques have been proposed to reduce the communication overhead of Federated Learning training procedures. However, these are typically designed for compressing model updates, which are exp
+ected to decay throughout training. As a result, such methods are inapplicable to downlink (i.e., from the parameter server to clients) compression in the cross-device setting, where heterogeneous clients may appear only once du
+ring training and thus must download the model parameters. Accordingly, we propose DoCoFL ? a new framework for downlink compression in the cross-device setting. Importantly, DoCoFL can be seamlessly combined with many uplink co
+mpression schemes, rendering it suitable for bi-directional compression. Through extensive evaluation, we show that DoCoFL offers significant bi-directional bandwidth reduction while achieving competitive accuracy to that of a baseline without any compression.
+---------------------------------------
+Tempo impiegato per l'esecuzione del test: 32925 ms
+
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 539.9 s -- in com.example.demo.DemoApplicationTests
+[INFO]
+[INFO] Results:
+[INFO]
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  09:03 min
+[INFO] Finished at: 2024-11-10T15:04:11+01:00
+[INFO] ------------------------------------------------------------------------

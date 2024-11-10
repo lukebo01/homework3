@@ -3,7 +3,10 @@ package com.example.demo;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.apache.lucene.search.similarities.*;
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
+import org.junit.jupiter.api.MethodOrderer;
 import java.util.List;
 import org.springframework.boot.test.context.SpringBootTest;
 import com.example.demo.controller.LuceneService;
@@ -18,155 +21,218 @@ import org.apache.lucene.queryparser.classic.QueryParser;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.search.BooleanQuery;
 
-
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 @SpringBootTest
 public class DemoApplicationTests {
 
 	private LuceneService luceneService = new LuceneService();
 
-	// Test for a complex TermQuery on a very specific research topic in the title
+	// Metodo helper per misurare e stampare la durata del test
+	private void runTestWithTiming(Runnable testMethod) {
+		long startTime = System.currentTimeMillis();
+		testMethod.run();
+		long endTime = System.currentTimeMillis();
+		System.out.println("Tempo impiegato per l'esecuzione del test: " + (endTime - startTime) + " ms\n");
+	}
+
 	@Test
+	@Order(1)
 	public void testIndexingAndSearchTQ() throws Exception {
-		String query = "Efficient approximation algorithms for NP-hard problems";
-		List<SearchResult> results = luceneService.search("title", query);
-		assertNotNull(results);
-		assertFalse(results.isEmpty());
-		printResults(results);
+		runTestWithTiming(() -> {
+			try {
+				String query = "Efficient approximation algorithms for NP-hard problems";
+				System.out.println("\n\n" + "Test 1 - Query: " + query + "\n\n");
+				List<SearchResult> results = luceneService.search("title", query);
+				assertNotNull(results);
+				assertFalse(results.isEmpty());
+				printResults(results);
+			} catch (Exception e) {
+				throw new RuntimeException(e);
+			}
+		});
 	}
 
-	// Test for a PhraseQuery in the content field with a very specific multi-term phrase
 	@Test
+	@Order(2)
 	public void testIndexingAndSearchPQ() throws Exception {
-		String query = "\"Distributed ledger technology in financial systems\"";
-		List<SearchResult> results = luceneService.search("content", query);
-		assertNotNull(results);
-		assertFalse(results.isEmpty());
-		printResults(results);
+		runTestWithTiming(() -> {
+			try {
+				String query = "Distributed ledger technology in financial systems";
+				System.out.println("\n\n" + "Test 2 - Query: " + query + "\n\n");
+				List<SearchResult> results = luceneService.search("content", query);
+				assertNotNull(results);
+				assertFalse(results.isEmpty());
+				printResults(results);
+			} catch (Exception e) {
+				throw new RuntimeException(e);
+			}
+		});
 	}
 
-	// Test for PhraseQuery with slop on a highly specific research topic in the content
 	@Test
+	@Order(3)
 	public void testIndexingAndSearchPQWithSlop() throws Exception {
-		String query = "\"Blockchain consensus mechanisms\"~2"; // slop of 2 for flexibility in word order
-		List<SearchResult> results = luceneService.search("content", query);
-		assertNotNull(results);
-		assertFalse(results.isEmpty());
-		printResults(results);
+		runTestWithTiming(() -> {
+			try {
+				String query = "\"Blockchain consensus mechanisms\"~2";
+				System.out.println("\n\n" + "Test 3 - Query: " + query + "\n\n");
+				List<SearchResult> results = luceneService.search("content", query);
+				assertNotNull(results);
+				assertFalse(results.isEmpty());
+				printResults(results);
+			} catch (Exception e) {
+				throw new RuntimeException(e);
+			}
+		});
 	}
 
-
-	// Test for BooleanQuery combining title and content with complex conditions
 	@Test
+	@Order(4)
 	public void testIndexingAndSearchComplexBQ() throws Exception {
-		Query phraseQueryTitle = new PhraseQuery("title", "Quantum", "algorithms");
-		Query termQueryContent1 = new TermQuery(new Term("content", "Shor's algorithm"));
-		Query termQueryContent2 = new TermQuery(new Term("content", "Grover's algorithm"));
+		runTestWithTiming(() -> {
+			try {
+				Query phraseQueryTitle = new PhraseQuery("title", "Quantum", "algorithms");
+				Query termQueryContent1 = new TermQuery(new Term("content", "Shor's algorithm"));
+				Query termQueryContent2 = new TermQuery(new Term("content", "Grover's algorithm"));
 
-		BooleanQuery booleanQuery = new BooleanQuery.Builder()
-				.add(phraseQueryTitle, BooleanClause.Occur.MUST)
-				.add(termQueryContent1, BooleanClause.Occur.SHOULD)
-				.add(termQueryContent2, BooleanClause.Occur.SHOULD)
-				.build();
+				BooleanQuery booleanQuery = new BooleanQuery.Builder()
+						.add(phraseQueryTitle, BooleanClause.Occur.MUST)
+						.add(termQueryContent1, BooleanClause.Occur.SHOULD)
+						.add(termQueryContent2, BooleanClause.Occur.SHOULD)
+						.build();
 
-		List<SearchResult> results = luceneService.search("content", booleanQuery.toString());
-		assertNotNull(results);
-		assertFalse(results.isEmpty());
-		printResults(results);
+				System.out.println("\n\n" + "Test 4 - Query: " + booleanQuery.toString() + "\n\n");
+				List<SearchResult> results = luceneService.search("content", booleanQuery.toString());
+				assertNotNull(results);
+				assertFalse(results.isEmpty());
+				printResults(results);
+			} catch (Exception e) {
+				throw new RuntimeException(e);
+			}
+		});
 	}
 
-	// Test for ranking with different similarity metrics (e.g., Cosine, Euclidean, etc.)
 	@Test
+	@Order(5)
 	public void testRankingWithDifferentSimilarities() throws Exception {
-		String query = "artificial intelligence in healthcare";
-
-		//Similarity
-		Similarity similarity = new ClassicSimilarity();
-		List<SearchResult> resultsCosine = luceneService.searchWithSimilarity("content", query, similarity);
-
-		// Using euclidean Similarity
-		similarity = new MultiSimilarity(new Similarity[] { new ClassicSimilarity(), new BM25Similarity(), new BooleanSimilarity(), new LMDirichletSimilarity()});
-		List<SearchResult> resultsMultisimilarity = luceneService.searchWithSimilarity("content", query, similarity);
+		runTestWithTiming(() -> {
+			try {
+				String query = "artificial intelligence in healthcare";
 
 
-		// Assert that both rankings return results
-		assertNotNull(resultsCosine);
-		assertFalse(resultsCosine.isEmpty());
+				Similarity similarity = new MultiSimilarity(new Similarity[] { new ClassicSimilarity(), new BM25Similarity(),
+						new BooleanSimilarity(), new LMDirichletSimilarity() });
+				System.out.println("\n\n" + "Test 5 - Query: " + query + "\n\n");
+				List<SearchResult> resultsMultisimilarity = luceneService.searchWithSimilarity("content", query, similarity);
 
-		assertNotNull(resultsMultisimilarity);
-		assertFalse(resultsMultisimilarity.isEmpty());
 
-		System.out.println("\nResults using Cosine Similarity:");
-		printResults(resultsCosine);
+				assertNotNull(resultsMultisimilarity);
+				assertFalse(resultsMultisimilarity.isEmpty());
 
-		System.out.println("\nResults using MultiSimilarity ( ClassicSimilarity, BM25Similarity, BooleanSimilarity, LMDirichletSimilarity):");
-		printResults(resultsMultisimilarity);
+
+				System.out.println("\nResults using MultiSimilarity ( ClassicSimilarity, BM25Similarity, BooleanSimilarity, LMDirichletSimilarity):");
+				printResults(resultsMultisimilarity);
+			} catch (Exception e) {
+				throw new RuntimeException(e);
+			}
+		});
 	}
 
-	// Test for PhraseQuery with a query parser for searching content
 	@Test
+	@Order(6)
 	public void testIndexingAndSearchQP() throws Exception {
-		String query = "\"Neural networks in natural language processing\"";
+		runTestWithTiming(() -> {
+			try {
+				String query = "\"Neural networks in natural language processing\"";
+				QueryParser parser = new QueryParser("content", new StandardAnalyzer());
+				Query parsedQuery = parser.parse(query);
 
-		// Using a query parser to interpret and execute the search
-		QueryParser parser = new QueryParser("content", new StandardAnalyzer());
-		Query parsedQuery = parser.parse(query);
-
-		List<SearchResult> results = luceneService.search("content", parsedQuery.toString());
-		assertNotNull(results);
-		assertFalse(results.isEmpty());
-		printResults(results);
+				System.out.println("\n\n" + "Test 6 - Query: " + parsedQuery.toString() + "\n\n");
+				List<SearchResult> results = luceneService.search("content", parsedQuery.toString());
+				assertNotNull(results);
+				assertFalse(results.isEmpty());
+				printResults(results);
+			} catch (Exception e) {
+				throw new RuntimeException(e);
+			}
+		});
 	}
 
-	// Test for querying with new objects like the use of Similarity
 	@Test
+	@Order(7)
 	public void testIndexingAndSearchWithSimilarity() throws Exception {
-		String query = "quantum computing";
-
-		// Using a custom similarity (e.g., ClassicSimilarity) for ranking
-		Similarity similarity = new ClassicSimilarity();
-		List<SearchResult> results = luceneService.searchWithSimilarity("content", query, similarity);
-		assertNotNull(results);
-		assertFalse(results.isEmpty());
-		printResults(results);
+		runTestWithTiming(() -> {
+			try {
+				String query = "quantum computing";
+				Similarity similarity = new ClassicSimilarity();
+				System.out.println("\n\n" + "Test 7 - Query: " + query + "\n\n");
+				List<SearchResult> results = luceneService.searchWithSimilarity("content", query, similarity);
+				assertNotNull(results);
+				assertFalse(results.isEmpty());
+				printResults(results);
+			} catch (Exception e) {
+				throw new RuntimeException(e);
+			}
+		});
 	}
 
-	// Test for a PhraseQuery with multi-term phrase including specific mathematical research topic
 	@Test
-	public void testIndexingAndSearchPQ2() throws Exception {
-		String query = "\"Approximation schemes for scheduling problems\"";
-		List<SearchResult> results = luceneService.search("content", query);
-		assertNotNull(results);
-		assertFalse(results.isEmpty());
-		printResults(results);
-	}
-
-	// Test for BooleanQuery with combination of specific terms and their negation (advanced search)
-	@Test
+	@Order(8)
 	public void testIndexingAndSearchNegationBQ() throws Exception {
-		Query termQuery1 = new TermQuery(new Term("content", "dynamic programming"));
-		Query termQuery2 = new TermQuery(new Term("content", "greedy algorithms"));
+		runTestWithTiming(() -> {
+			try {
+				Query termQuery1 = new TermQuery(new Term("content", "dynamic programming"));
+				Query termQuery2 = new TermQuery(new Term("content", "greedy algorithms"));
 
-		BooleanQuery booleanQuery = new BooleanQuery.Builder()
-				.add(termQuery1, BooleanClause.Occur.MUST)
-				.add(termQuery2, BooleanClause.Occur.MUST_NOT)
-				.build();
+				BooleanQuery booleanQuery = new BooleanQuery.Builder()
+						.add(termQuery1, BooleanClause.Occur.MUST)
+						.add(termQuery2, BooleanClause.Occur.MUST_NOT)
+						.build();
 
-		List<SearchResult> results = luceneService.search("content", booleanQuery.toString());
-		assertNotNull(results);
-		assertFalse(results.isEmpty());
-		printResults(results);
+				System.out.println("\n\n" + "Test 8 - Query: " + booleanQuery.toString() + "\n\n");
+				List<SearchResult> results = luceneService.search("content", booleanQuery.toString());
+				assertNotNull(results);
+				assertFalse(results.isEmpty());
+				printResults(results);
+			} catch (Exception e) {
+				throw new RuntimeException(e);
+			}
+		});
 	}
 
-	// Test for a PhraseQuery with multiple terms and a complex scientific topic
 	@Test
-	public void testIndexingAndSearchScientificPQ() throws Exception {
-		String query = "\"High-dimensional data visualization using t-SNE\"";
-		List<SearchResult> results = luceneService.search("content", query);
-		assertNotNull(results);
-		assertFalse(results.isEmpty());
-		printResults(results);
+	@Order(9)
+	public void testIndexingAndSearchTQAbstract() throws Exception {
+		runTestWithTiming(() -> {
+			try {
+				String query = "Deep learning techniques";
+				System.out.println("\n\n" + "Test 9 - Query: " + query + "\n\n");
+				List<SearchResult> results = luceneService.search("abstract", query);
+				assertNotNull(results);
+				assertFalse(results.isEmpty());
+				printResults(results);
+			} catch (Exception e) {
+				throw new RuntimeException(e);
+			}
+		});
 	}
 
+	@Test
+	@Order(10)
+	public void testIndexingAndSearchTQBiblio() throws Exception {
+		runTestWithTiming(() -> {
+			try {
+				String query = "P. Richtárik";
+				System.out.println("\n\n" + "Test 10 - Query: " + query + "\n\n");
+				List<SearchResult> results = luceneService.search("bibliographies", query);
+				assertNotNull(results);
+				assertFalse(results.isEmpty());
+				printResults(results);
+			} catch (Exception e) {
+				throw new RuntimeException(e);
+			}
+		});
+	}
 
 	// Helper method to print results in a readable format
 	private void printResults(List<SearchResult> results) {

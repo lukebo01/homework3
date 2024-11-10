@@ -81,7 +81,7 @@ public class LuceneService {
         return null;
     }
 
-    //------------------------------------------- RICERCHE AVANZATE PE RIL TESTING ------------------------------------
+    //------------------------------------------- RICERCHE AVANZATE PER IL TESTING ------------------------------------
 
     // funzione per List<SearchResult> results = luceneService.searchWithSimilarity("content", query, similarity);
     public List<SearchResult> searchWithSimilarity(String searchField, String queryString, Similarity similarity) {

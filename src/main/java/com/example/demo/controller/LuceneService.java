@@ -27,22 +27,37 @@ import com.example.demo.*;
 import com.example.demo.model.*;
 
 public class LuceneService {
+    Map<String, Analyzer> analyzerPerField;
+    DirectoryReader reader;
+    IndexSearcher searcher;
+
+    public LuceneService(){
+        this.analyzerPerField = new HashMap<>();
+        analyzerPerField.put("filename", CustomAnalyzers.getSimpleAnalyzer());
+        analyzerPerField.put("title", CustomAnalyzers.getTitleAnalyzer());
+        analyzerPerField.put("content", CustomAnalyzers.getContentAnalyzer());
+        analyzerPerField.put("authors", CustomAnalyzers.getSimpleAnalyzer());
+        analyzerPerField.put("abstract", CustomAnalyzers.getAbstractAnalyzer());
+        analyzerPerField.put("bibliographies", CustomAnalyzers.getBibliographyAnalyzer());
+
+        try {
+            Directory indexDirectory = FSDirectory.open(Paths.get("lucene-index"));
+            this.reader = DirectoryReader.open(indexDirectory);
+            this.searcher = new IndexSearcher(reader);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+    }
     public List<SearchResult> search(String searchField, String queryString) {
         List<SearchResult> resultsList = new ArrayList<>();
         try {
             Directory indexDirectory = FSDirectory.open(Paths.get("lucene-index"));
-            Map<String, Analyzer> analyzerPerField = new HashMap<>();
-            // Mappa degli analyzer per ciascun campo (presa da CustomAnalyzers)
-            analyzerPerField.put("filename", CustomAnalyzers.getSimpleAnalyzer());
-            analyzerPerField.put("title", CustomAnalyzers.getTitleAnalyzer());
-            analyzerPerField.put("content", CustomAnalyzers.getContentAnalyzer());
-            analyzerPerField.put("authors", CustomAnalyzers.getSimpleAnalyzer());
-            analyzerPerField.put("abstract", CustomAnalyzers.getAbstractAnalyzer());
-            analyzerPerField.put("bibliographies", CustomAnalyzers.getBibliographyAnalyzer());
 
             // Lettura dell'indice e creazione dell'IndexSearcher
-            DirectoryReader reader = DirectoryReader.open(indexDirectory);
-            IndexSearcher searcher = new IndexSearcher(reader);
+            //DirectoryReader reader = DirectoryReader.open(indexDirectory);
+            //IndexSearcher searcher = new IndexSearcher(reader);
 
             Analyzer analyzer = analyzerPerField.get(searchField);
 

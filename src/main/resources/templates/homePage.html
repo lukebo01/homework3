@@ -113,7 +113,7 @@
         <div class="list-group">
             <div class="list-group-item" th:each="item : ${result}">
                 <h4>
-                    <a th:href="@{${item.filename}}" th:text="'[' + ${itemStat.index + 1} + '° risultato] ' + ${item.filename}">
+                    <a th:href="@{'/all_tables/' + ${item.filename}}" th:text="'[' + ${itemStat.index + 1} + '° risultato] ' + ${item.filename}">
                         File link
                     </a>
                 </h4>

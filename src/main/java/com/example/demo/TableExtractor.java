@@ -31,7 +31,9 @@ public class TableExtractor {
                 JSONObject tableObj = jsonObj.getJSONObject(tableId);
                 Map<String, String> tableData = new HashMap<>();
 
-                tableData.put("filename", jsonFile.getName());
+                String filename = jsonFile.getName();
+
+                tableData.put("filename",filename);
                 tableData.put("id_table", tableId);
                 tableData.put("caption", tableObj.optString("caption", "N/A"));
                 String htmlTable = tableObj.optString("table", "N/A").replaceAll("\\n", "");

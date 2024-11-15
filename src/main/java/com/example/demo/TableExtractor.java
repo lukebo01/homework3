@@ -36,7 +36,14 @@ public class TableExtractor {
                 tableData.put("filename",filename);
                 tableData.put("id_table", tableId);
                 tableData.put("caption", tableObj.optString("caption", "N/A"));
+
                 String htmlTable = tableObj.optString("table", "N/A").replaceAll("\\n", "");
+
+                // Rimuovi gli attributi non standard
+                htmlTable = htmlTable.replaceAll("rowspan=\"\\d+\"", "");
+                htmlTable = htmlTable.replaceAll("colspan=\"\\d+\"", "");
+
+
                 tableData.put("table", htmlTable);
                 // Estrai le parole chiave dalle righe e dalle colonne
                 tableData.put("column_keywords", String.join(", ", extractColumnKeywords(htmlTable)));

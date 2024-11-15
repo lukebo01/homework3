@@ -11,8 +11,8 @@ import org.apache.lucene.search.ScoreDoc;
 import org.apache.lucene.search.TopDocs;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
-import org.apache.lucene.search.similarities.Similarity;
-import org.apache.lucene.search.similarities.ClassicSimilarity;
+import org.apache.lucene.search.BooleanClause;
+import org.apache.lucene.search.BooleanQuery;
 
 
 
@@ -33,12 +33,9 @@ public class LuceneService {
 
     public LuceneService(){
         this.analyzerPerField = new HashMap<>();
-        analyzerPerField.put("filename", CustomAnalyzers.getSimpleAnalyzer());
-        analyzerPerField.put("title", CustomAnalyzers.getTitleAnalyzer());
-        analyzerPerField.put("content", CustomAnalyzers.getContentAnalyzer());
-        analyzerPerField.put("authors", CustomAnalyzers.getSimpleAnalyzer());
-        analyzerPerField.put("abstract", CustomAnalyzers.getAbstractAnalyzer());
-        analyzerPerField.put("bibliographies", CustomAnalyzers.getBibliographyAnalyzer());
+        analyzerPerField.put("filename", CustomAnalyzers.getFilenameAnalyzer());
+        analyzerPerField.put("caption", CustomAnalyzers.getCaptionAnalyzer());
+        analyzerPerField.put("keywords", CustomAnalyzers.getKeywordAnalyzer());
 
         try {
             Directory indexDirectory = FSDirectory.open(Paths.get("lucene-index"));
@@ -47,22 +44,33 @@ public class LuceneService {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
     }
-    public List<SearchResult> search(String searchField, String queryString) {
+
+    public List<SearchResult> search(String queryString)
+    {
         List<SearchResult> resultsList = new ArrayList<>();
         try {
-            Directory indexDirectory = FSDirectory.open(Paths.get("lucene-index"));
 
-            // Lettura dell'indice e creazione dell'IndexSearcher
-            //DirectoryReader reader = DirectoryReader.open(indexDirectory);
-            //IndexSearcher searcher = new IndexSearcher(reader);
+            Analyzer captionAnalyzers = analyzerPerField.get("caption");
+            Analyzer keywordAnalyzers = analyzerPerField.get("keywords");
 
-            Analyzer analyzer = analyzerPerField.get(searchField);
+            QueryParser parser1 = new QueryParser("caption", captionAnalyzers);
+            Query query1 = parser1.parse(queryString);
 
-            QueryParser parser = new QueryParser(searchField, analyzer);
-            Query query = parser.parse(queryString);
+            // Creo altre due query per cercare anche nei campi "column_keywords" e "row_keywords"
+            QueryParser parser2 = new QueryParser("keywords", keywordAnalyzers);
+            Query query2 = parser2.parse(queryString);
+
+            QueryParser parser3 = new QueryParser("keywords", keywordAnalyzers);
+            Query query3 = parser3.parse(queryString);
+
+            // Creo quindi un unica grossa query per fondere i 10 migliori risultati con score più alto
+            // Combina le query usando BooleanQuery
+            BooleanQuery query = new BooleanQuery.Builder()
+                    .add(query1, BooleanClause.Occur.SHOULD) // Cerca nel campo "caption"
+                    .add(query2, BooleanClause.Occur.SHOULD) // Cerca nel campo "keywords" (es. column_keywords)
+                    .add(query3, BooleanClause.Occur.SHOULD) // Cerca nel campo "keywords" (es. row_keywords)
+                    .build();
 
             TopDocs results = searcher.search(query, 10);
             ScoreDoc[] hits = results.scoreDocs;
@@ -72,19 +80,14 @@ public class LuceneService {
 
                 String filename = doc.get("filename");
                 float score = hit.score;
-                String title = doc.get("title");
-                String authors = doc.get("authors");
-                String abstractText = doc.get("abstract") != null ? doc.get("abstract") : "N/A";
-                String contentSnippet = doc.get("content") != null
-                        ? doc.get("content").substring(0, Math.min(100, doc.get("content").length())) + "..."
-                        : "N/A";
-                String bibliographiesSnippet = doc.get("bibliographies") != null
-                        ? doc.get("bibliographies").substring(0, Math.min(100, doc.get("bibliographies").length())) + "..."
-                        : "N/A";
+                String id_table = doc.get("id_table");
+                String table = doc.get("table");
+                String caption = doc.get("caption");
+                String column_keywords = doc.get("column_keywords");
+                String row_keywords = doc.get("row_keywords");
 
                 // Create a SearchResult object and add it to the results list
-                SearchResult searchResult = new SearchResult(filename, score, title, authors, abstractText, contentSnippet,
-                        bibliographiesSnippet);
+                SearchResult searchResult = new SearchResult(filename, score, id_table, table, caption, column_keywords, row_keywords);
                 resultsList.add(searchResult);
             }
             return resultsList;
@@ -96,64 +99,4 @@ public class LuceneService {
         return null;
     }
 
-    //------------------------------------------- RICERCHE AVANZATE PER IL TESTING ------------------------------------
-
-    // funzione per List<SearchResult> results = luceneService.searchWithSimilarity("content", query, similarity);
-    public List<SearchResult> searchWithSimilarity(String searchField, String queryString, Similarity similarity) {
-        List<SearchResult> resultsList = new ArrayList<>();
-        try {
-            Directory indexDirectory = FSDirectory.open(Paths.get("lucene-index"));
-            Map<String, Analyzer> analyzerPerField = new HashMap<>();
-            // Mappa degli analyzer per ciascun campo (presa da CustomAnalyzers)
-            analyzerPerField.put("filename", CustomAnalyzers.getSimpleAnalyzer());
-            analyzerPerField.put("title", CustomAnalyzers.getTitleAnalyzer());
-            analyzerPerField.put("content", CustomAnalyzers.getContentAnalyzer());
-            analyzerPerField.put("authors", CustomAnalyzers.getSimpleAnalyzer());
-            analyzerPerField.put("abstract", CustomAnalyzers.getAbstractAnalyzer());
-            analyzerPerField.put("bibliographies", CustomAnalyzers.getBibliographyAnalyzer());
-
-            // Lettura dell'indice e creazione dell'IndexSearcher
-            DirectoryReader reader = DirectoryReader.open(indexDirectory);
-            IndexSearcher searcher = new IndexSearcher(reader);
-            searcher.setSimilarity(similarity);
-
-            Analyzer analyzer = analyzerPerField.get(searchField);
-
-            QueryParser parser = new QueryParser(searchField, analyzer);
-            Query query = parser.parse(queryString);
-
-            TopDocs results = searcher.search(query, 10);
-            ScoreDoc[] hits = results.scoreDocs;
-
-            for (ScoreDoc hit : hits) {
-                Document doc = searcher.doc(hit.doc);
-
-                String filename = doc.get("filename");
-                float score = hit.score;
-                String title = doc.get("title");
-                String authors = doc.get("authors");
-                String abstractText = doc.get("abstract") != null ? doc.get("abstract") : "N/A";
-                String contentSnippet = doc.get("content") != null
-                        ? doc.get("content").substring(0, Math.min(100, doc.get("content").length())) + "..."
-                        : "N/A";
-                String bibliographiesSnippet = doc.get("bibliographies") != null
-                        ? doc.get("bibliographies").substring(0, Math.min(100, doc.get("bibliographies").length())) + "..."
-                        : "N/A";
-
-                // Create a SearchResult object and add it to the results list
-                SearchResult searchResult = new SearchResult(filename, score, title, authors, abstractText, contentSnippet,
-                        bibliographiesSnippet);
-                resultsList.add(searchResult);
-
-            }
-            return resultsList;
-        } catch (IOException e ) {
-            e.printStackTrace();
-        } catch (ParseException e) {
-            e.printStackTrace();
-
-            return null;
-        }
-        return null;
-    }
 }

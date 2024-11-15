@@ -18,12 +18,13 @@ public class controller {
     }
 
     @GetMapping("/search")
-    public String searchPages(Model model, @RequestParam(name="q") String query, @RequestParam(name="search_type") String searchType){
-        //model.addAttribute("query", query);
-        //model.addAttribute("searchType", searchType);
+    public String searchPages(Model model, @RequestParam(name="q") String query){
+        long startTime = System.currentTimeMillis();
         System.out.println("submitted query");
-        model.addAttribute("result", this.luceneService.search(searchType, query));
+        model.addAttribute("result", this.luceneService.search(query));
         System.out.println("finished query");
+        long endTime = System.currentTimeMillis();
+        System.out.println("Tempo di esecuzione: " + (endTime - startTime) + "ms");
         return "homePage.html";
     }
 

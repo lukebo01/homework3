@@ -3,7 +3,8 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
-all_htmls
+all_tables
+all_tables
 lucene-index
 
 ### STS ###
@@ -35,5 +36,6 @@ build/
 .vscode/
 
 # ignoro le cartelle all_htmls e lucene-index
-./all_htmls
+./all_tables
+all_tables
 ./lucene-index

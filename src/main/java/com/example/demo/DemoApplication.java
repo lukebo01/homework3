@@ -1,7 +1,5 @@
 package com.example.demo;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.miscellaneous.PerFieldAnalyzerWrapper;
 import org.apache.lucene.document.Document;
@@ -12,10 +10,6 @@ import org.apache.lucene.index.IndexWriterConfig;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
 import org.apache.lucene.codecs.simpletext.SimpleTextCodec;
-import org.json.JSONObject;
-import org.json.JSONArray;
-import org.json.JSONTokener;
-import java.io.FileReader;
 
 
 import java.io.File;
@@ -27,10 +21,8 @@ import java.util.Locale;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.net.URLEncoder;
-
 @SpringBootApplication
-public class MainApplication {
+public class DemoApplication {
 
 	public static void main(String[] args) {
 		Locale.setDefault(Locale.ENGLISH);
@@ -108,6 +100,6 @@ public class MainApplication {
 		}
 
 		// Avvio dell'applicazione Spring Boot
-		SpringApplication.run(MainApplication.class, args);
+		SpringApplication.run(DemoApplication.class, args);
 	}
 }

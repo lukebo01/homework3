@@ -3,21 +3,21 @@ package com.example.demo.model;
 public class SearchResult {
     private String filename;
     private float score;
-    private String title;
-    private String authors;
-    private String abstractText;
-    private String contentSnippet;
-    private String bibliographiesSnippet;
+    private String id_table;
+    private String table;
+    private String caption;
+    private String column_keywords;
+    private String row_keywords;
 
     // Constructor
-    public SearchResult(String filename, float score, String title, String authors, String abstractText, String contentSnippet, String bibliographiesSnippet) {
+    public SearchResult(String filename, float score, String id_table,String table, String caption, String column_keywords, String row_keywords) {
         this.filename = filename;
         this.score = score;
-        this.title = title;
-        this.authors = authors;
-        this.abstractText = abstractText;
-        this.contentSnippet = contentSnippet;
-        this.bibliographiesSnippet = bibliographiesSnippet;
+        this.table = table;
+        this.id_table = id_table;
+        this.caption = caption;
+        this.column_keywords = column_keywords;
+        this.row_keywords = row_keywords;
     }
 
     // Getters and Setters
@@ -25,22 +25,26 @@ public class SearchResult {
     public void setFilename(String filename) { this.filename = filename; }
     public float getScore() { return score; }
     public void setScore(float score) { this.score = score; }
-    public String getTitle() { return title; }
-    public void setTitle(String title) { this.title = title; }
-    public String getAuthors() { return authors; }
-    public void setAuthors(String authors) { this.authors = authors; }
-    public String getAbstractText() { return abstractText; }
-    public void setAbstractText(String abstractText) { this.abstractText = abstractText; }
-    public String getContentSnippet() { return contentSnippet; }
-    public void setContentSnippet(String contentSnippet) { this.contentSnippet = contentSnippet; }
-    public String getBibliographiesSnippet() { return bibliographiesSnippet; }
+    public String getId_table() { return id_table; }
+    public void setId_table(String id_table) { this.id_table = id_table; }
+    public String getTable() { return table; }
+    public void setTable(String table) { this.table = table; }
+    public String getCaption() { return caption; }
+    public void setCaption(String caption) { this.caption = caption; }
+    public String getColumn_keywords() { return column_keywords; }
+    public void setColumn_keywords(String column_keywords) { this.column_keywords = column_keywords; }
+    public String getRow_keywords() { return row_keywords; }
+    public void setRow_keywords(String row_keywords) { this.row_keywords = row_keywords; }
 
     @Override
     public String toString() {
         return "SearchResult{" +
-                "title='" + title + '\'' +
-                ", abstract='" + abstractText + '\'' +
-                ", author='" + authors + '\'' +
+                "filename='" + filename + '\'' +
+                ", score=" + score +
+                ", id_table='" + id_table + '\'' +
+                ", caption='" + caption + '\'' +
+                ", column_keywords='" + column_keywords + '\'' +
+                ", row_keywords='" + row_keywords + '\'' +
                 '}';
     }
 }

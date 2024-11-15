@@ -85,12 +85,11 @@
 </head>
 <body>
 
-<!-- Container principale  centrato-->
+<!-- Container principale centrato-->
 <div class="container my-5 d-flex justify-content-center align-items-center" style="min-height: 100vh;">
     <!-- Logo e titolo -->
     <div class="text-center mb-4">
         <h2><a href="http://localhost:8080" style="color: inherit; text-decoration: none;">Search Engine by Lucene</a></h2>
-        <!-- Inserisco qui i due nom ie e cognomi degli autori del progetto con le loro matricole-->
         <h3 class="lead">Progetto realizzato da: <br> Luca Borrelli (matricola 559443) e Rainer Cabral Ilao (matricola 560695)</h3>
         <p class="lead">Cerca nei tuoi documenti</p>
     </div>
@@ -98,33 +97,9 @@
     <!-- Form di ricerca -->
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <form th:action="@{/search}" method="get" class="form-inline">
-                <div class="d-flex justify-content-center mb-3">
-
-                    <div class="form-check form-check-inline">
-                        <input type="radio" id="title" name="search_type" value="title" checked class="form-check-input">
-                        <label for="title" class="form-check-label">Title</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input type="radio" id="content" name="search_type" value="content" class="form-check-input">
-                        <label for="content" class="form-check-label">Content</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input type="radio" id="authors" name="search_type" value="authors" class="form-check-input">
-                        <label for="authors" class="form-check-label">Author</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input type="radio" id="bibliographies" name="search_type" value="bibliographies" class="form-check-input">
-                        <label for="bibliographies" class="form-check-label">Bibliographies</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input type="radio" id="abstract" name="search_type" value="abstract" class="form-check-input">
-                        <label for="abstract" class="form-check-label">Abstract</label>
-                    </div>
-                </div>
-
+            <form id="searchForm" th:action="@{/search}" method="get" class="form-inline">
                 <div class="input-group mb-3">
-                    <input type="text" name="q" class="form-control" placeholder="Inserisci la tua ricerca..." required>
+                    <input type="text" id="queryInput" name="q" class="form-control" placeholder="Inserisci la tua ricerca..." required>
                     <button type="submit" class="btn btn-primary">Cerca</button>
                 </div>
             </form>
@@ -132,27 +107,56 @@
     </div>
 
     <!-- Risultati della ricerca -->
-    <div class="results-container" th:if="${result}">
-        <h3>Risultati della ricerca</h3>
+    <div class="results-container" id="results" th:if="${result}">
+        <h3>Risultati della ricerca per: <span id="userQuery"></span></h3>
+        <p>Abbiamo trovato <strong th:text="${result.size()}">0</strong> risultati per la tua ricerca.</p>
         <div class="list-group">
             <div class="list-group-item" th:each="item : ${result}">
-                <h2><a th:href="${item.filename}" th:text="${item.title}" target="_blank">Title</a></h2>
+                <h4>
+                    <a th:href="@{${item.filename}}" th:text="'[' + ${itemStat.index + 1} + '° risultato] ' + ${item.filename}">
+                        File link
+                    </a>
+                </h4>
+
                 <p><strong>Punteggio:</strong> <span th:text="${item.score}">Score</span></p>
-                <p><strong>Autori:</strong> <span th:text="${item.authors}">Autori</span></p>
-                <p><strong>Abstract:</strong> <span th:text="${item.abstractText}">Abstract</span></p>
-                <p><strong>Contenuto:</strong> <span th:text="${item.contentSnippet}">Snippet di contenuto</span></p>
-                <p><strong>Bibliografie:</strong> <span th:text="${item.bibliographiesSnippet}">Snippet di bibliografie</span></p>
+                <p><strong>ID TABLE:</strong> <span th:text="${item.id_table}">ID_TABLE</span></p>
+                <p><strong>Caption:</strong> <span th:text="${item.caption}">Nome Tabella</span></p>
+                <p><strong>Column Keywords:</strong> <span th:text="${item.column_keywords}">Column Keywords</span></p>
+                <p><strong>Row Keywords:</strong> <span th:text="${item.row_keywords}">Row Keywords</span></p>
+                <!-- Aggiunta del campo table come HTML -->
+                <div class="table-container mt-4">
+                    <h5>Tabella:</h5>
+                    <div th:utext="${item.table}"></div>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<!-- Bootstrap JS (dal CDN) -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
-        integrity="sha384-pzjw8f+ua7Kw1TIq0v8FqC0ykpPfyfRpRH2ZPfmYkFJ5XtRxWm1V8K9l8iEjHl3K"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
-        integrity="sha384-pzjw8f+ua7Kw1TIq0v8FqC0ykpPfyfRpRH2ZPfmYkFJ5XtRxWm1V8K9l8iEjHl3K"
-        crossorigin="anonymous"></script>
+    <!-- Bootstrap JS (dal CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+            integrity="sha384-pzjw8f+ua7Kw1TIq0v8FqC0ykpPfyfRpRH2ZPfmYkFJ5XtRxWm1V8K9l8iEjHl3K"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+            integrity="sha384-pzjw8f+ua7Kw1TIq0v8FqC0ykpPfyfRpRH2ZPfmYkFJ5XtRxWm1V8K9l8iEjHl3K"
+            crossorigin="anonymous"></script>
+
+    <!-- JavaScript per gestire la query -->
+    <script>
+        const form = document.getElementById('searchForm');
+        const queryInput = document.getElementById('queryInput');
+        const userQuery = document.getElementById('userQuery');
+
+        // Quando il form viene inviato, salva la query nel localStorage
+        form.addEventListener('submit', (event) => {
+            localStorage.setItem('lastQuery', queryInput.value);
+        });
+
+        // Recupera la query salvata e visualizzala
+        const lastQuery = localStorage.getItem('lastQuery');
+        if (lastQuery) {
+            userQuery.textContent = lastQuery;
+        }
+    </script>
+</div>
 </body>
 </html>

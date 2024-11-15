@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>homework2</artifactId>
+	<artifactId>homework3</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>homework2</name>
 	<description>A Search Engine for documents html</description>
@@ -87,7 +87,13 @@
 			<!-- jsoup HTML parser library @ https://jsoup.org/ -->
 			<groupId>org.jsoup</groupId>
 			<artifactId>jsoup</artifactId>
-			<version>1.14.3</version>
+			<version>1.15.3</version>
+		</dependency>
+		<dependency>
+			<!-- jsoup HTML parser library @ https://jsoup.org/ -->
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20210307</version>
 		</dependency>
 		<dependency>
 			<groupId>com.google.code.gson</groupId>

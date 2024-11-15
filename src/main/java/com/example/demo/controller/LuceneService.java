@@ -58,10 +58,10 @@ public class LuceneService {
             Query query1 = parser1.parse(queryString);
 
             // Creo altre due query per cercare anche nei campi "column_keywords" e "row_keywords"
-            QueryParser parser2 = new QueryParser("keywords", keywordAnalyzers);
+            QueryParser parser2 = new QueryParser("column_keywords", keywordAnalyzers);
             Query query2 = parser2.parse(queryString);
 
-            QueryParser parser3 = new QueryParser("keywords", keywordAnalyzers);
+            QueryParser parser3 = new QueryParser("row_keywords", keywordAnalyzers);
             Query query3 = parser3.parse(queryString);
 
             // Creo quindi un unica grossa query per fondere i 10 migliori risultati con score più alto

@@ -40,3 +40,5 @@ build/
 all_tables
 ./lucene-index
 queries.json
+hw3_evaluation/.venv
+hw3_evaluation/all_tables

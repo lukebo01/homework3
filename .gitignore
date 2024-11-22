@@ -39,3 +39,4 @@ build/
 ./all_tables
 all_tables
 ./lucene-index
+queries.json

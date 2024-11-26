@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import com.example.demo.model.SearchResult;
 import com.example.demo.services.AsyncJsonWriterService;
+import com.example.demo.services.LuceneService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,7 +19,8 @@ public class controller {
     @Autowired
     private AsyncJsonWriterService asyncJsonWriterService;
 
-    private LuceneService luceneService = new LuceneService();
+    @Autowired
+    private LuceneService luceneService;
 
     @GetMapping("/")
     public String homePage(){
@@ -30,26 +32,17 @@ public class controller {
         long startTime = System.currentTimeMillis();
         System.out.println("submitted query");
 
-        // Esegui la ricerca con il servizio Lucene
+        // Salva i risultati in modo asincrono
         List<SearchResult> results = luceneService.search(query);
 
-        // Aggiungi i risultati al modello per la vista
         model.addAttribute("result", results);
-
-        // Genera un ID unico per la query
-        String queryId = "q" + System.currentTimeMillis();
-
-        // Salva i risultati nel JSON in modo asincrono
-        asyncJsonWriterService.writeResultsToJson(queryId, query, results);
-
-        System.out.println("finished query");
 
         long endTime = System.currentTimeMillis();
         System.out.println("Tempo di esecuzione: " + (endTime - startTime) + "ms");
 
-        // Restituisci la vista al client
         return "homePage.html";
     }
+
 
 
 }

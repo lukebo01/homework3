@@ -1,4 +1,4 @@
-package com.example.demo.controller;
+package com.example.demo.services;
 
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.document.Document;
@@ -13,6 +13,7 @@ import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
 import org.apache.lucene.search.BooleanClause;
 import org.apache.lucene.search.BooleanQuery;
+import org.springframework.stereotype.Service;
 
 
 
@@ -26,12 +27,15 @@ import java.util.Map;
 import com.example.demo.*;
 import com.example.demo.model.*;
 
+@Service
 public class LuceneService {
     Map<String, Analyzer> analyzerPerField;
     DirectoryReader reader;
     IndexSearcher searcher;
+    private final AsyncJsonWriterService asyncJsonWriterService;
 
-    public LuceneService(){
+    public LuceneService(AsyncJsonWriterService asyncJsonWriterService){
+        this.asyncJsonWriterService = asyncJsonWriterService;
         this.analyzerPerField = new HashMap<>();
         analyzerPerField.put("filename", CustomAnalyzers.getFilenameAnalyzer());
         analyzerPerField.put("caption", CustomAnalyzers.getCaptionAnalyzer());
@@ -90,6 +94,8 @@ public class LuceneService {
                 SearchResult searchResult = new SearchResult(filename, score, id_table, table, caption, column_keywords, row_keywords);
                 resultsList.add(searchResult);
             }
+            String queryId = "q" + System.currentTimeMillis();
+            asyncJsonWriterService.writeResultsToJson(queryId, queryString, resultsList);
             return resultsList;
         } catch (IOException e) {
             e.printStackTrace();

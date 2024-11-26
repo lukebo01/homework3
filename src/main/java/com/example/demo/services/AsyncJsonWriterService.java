@@ -17,7 +17,7 @@ public class AsyncJsonWriterService {
     }
 
     @Async
-    public void writeResultsToJson(String queryId, String query, List<SearchResult> results) {
+    public void writeResultsToJson(String queryId, String query, List<SearchResult> results, long time) {
         try {
             // Converti i risultati in un formato adatto al JSON
             List<Map<String, Object>> formattedResults = results.stream().map(result -> {
@@ -29,7 +29,7 @@ public class AsyncJsonWriterService {
             }).toList();
 
             // Scrivi i risultati nel file JSON
-            jsonFileHandler.appendQueryResult(queryId, query, formattedResults);
+            jsonFileHandler.appendQueryResult(queryId, query, formattedResults, time);
             System.out.println("Risultati salvati nel file JSON per la query: " + query);
         } catch (Exception e) {
             e.printStackTrace();

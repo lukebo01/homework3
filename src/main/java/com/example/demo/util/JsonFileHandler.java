@@ -16,7 +16,7 @@ public class JsonFileHandler {
     private static final String FILE_PATH = "queries.json";
     private final ObjectMapper objectMapper = new ObjectMapper();
 
-    public synchronized void appendQueryResult(String queryId, String query, List<Map<String, Object>> results) throws IOException {
+    public synchronized void appendQueryResult(String queryId, String query, List<Map<String, Object>> results, long time) throws IOException {
         File file = new File(FILE_PATH);
         ObjectNode root;
 
@@ -30,6 +30,7 @@ public class JsonFileHandler {
         // Crea un nodo per la query
         ObjectNode queryNode = objectMapper.createObjectNode();
         queryNode.put("query", query);
+        queryNode.put("time(ms)", time);
 
         // Converte i risultati in ArrayNode
         ArrayNode resultsArray = objectMapper.createArrayNode();

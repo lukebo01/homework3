@@ -52,6 +52,7 @@ public class LuceneService {
 
     public List<SearchResult> search(String queryString)
     {
+        long startTime = System.currentTimeMillis();
         List<SearchResult> resultsList = new ArrayList<>();
         try {
 
@@ -95,7 +96,8 @@ public class LuceneService {
                 resultsList.add(searchResult);
             }
             String queryId = "q" + System.currentTimeMillis();
-            asyncJsonWriterService.writeResultsToJson(queryId, queryString, resultsList);
+            long endTime = System.currentTimeMillis();
+            asyncJsonWriterService.writeResultsToJson(queryId, queryString, resultsList, endTime-startTime);
             return resultsList;
         } catch (IOException e) {
             e.printStackTrace();

@@ -1,0 +1,382 @@
+{
+  "q1732803549322": {
+    "query": "Task, Named Entity Recognition (NCBI Disease), prompt",
+    "time(ms)": 4034,
+    "result": [
+      {
+        "filename": "2303.04360.json",
+        "pos": 1,
+        "id_table": "S4.T6",
+        "relevance": true,
+        "relevance_score": 4
+      },
+      {
+        "filename": "2303.04360.json",
+        "pos": 2,
+        "id_table": "S3.T1",
+        "relevance": true,
+        "relevance_score": 4
+      },
+      {
+        "filename": "2303.04360.json",
+        "pos": 3,
+        "id_table": "S4.T4",
+        "relevance": false,
+        "relevance_score": 2
+      },
+      {
+        "filename": "2310.13362.json",
+        "pos": 4,
+        "id_table": "A1.T8.1",
+        "relevance": false,
+        "relevance_score": 3
+      },
+      {
+        "filename": "2407.16030v1.json",
+        "pos": 5,
+        "id_table": "id_table_2",
+        "relevance": false,
+        "relevance_score": 3
+      },
+      {
+        "filename": "2303.04360.json",
+        "pos": 6,
+        "id_table": "S5.T7",
+        "relevance": false,
+        "relevance_score": 3
+      },
+      {
+        "filename": "2408.04641v1.json",
+        "pos": 7,
+        "id_table": "S5.T5",
+        "relevance": false,
+        "relevance_score": 3
+      },
+      {
+        "filename": "2407.15154.json",
+        "pos": 8,
+        "id_table": "S2.T1.1",
+        "relevance": false,
+        "relevance_score": 2
+      },
+      {
+        "filename": "2404.18664v1.json",
+        "pos": 9,
+        "id_table": "S7.T3",
+        "relevance": false,
+        "relevance_score": 2
+      },
+      {
+        "filename": "2405.08295.json",
+        "pos": 10,
+        "id_table": "S4.T8",
+        "relevance": false,
+        "relevance_score": 2
+      }
+    ]
+  },
+  "q1732803562251": {
+    "query": "Intrusion Types, percentage%",
+    "time(ms)": 71,
+    "result": [
+      {
+        "filename": "2410.07612v1.json",
+        "pos": 1,
+        "id_table": "S4.T9",
+        "relevance": true,
+        "relevance_score": 4
+      },
+      {
+        "filename": "2410.07612v1.json",
+        "pos": 2,
+        "id_table": "S4.T6",
+        "relevance": true,
+        "relevance_score": 4
+      },
+      {
+        "filename": "2410.07612v1.json",
+        "pos": 3,
+        "id_table": "S4.T7",
+        "relevance": true,
+        "relevance_score": 4
+      },
+      {
+        "filename": "2410.07612v1.json",
+        "pos": 4,
+        "id_table": "S4.T8",
+        "relevance": true,
+        "relevance_score": 4
+      },
+      {
+        "filename": "2410.07612v1.json",
+        "pos": 5,
+        "id_table": "S4.T4",
+        "relevance": true,
+        "relevance_score": 4
+      },
+      {
+        "filename": "2410.07612v1.json",
+        "pos": 6,
+        "id_table": "S4.T5",
+        "relevance": true,
+        "relevance_score": 4
+      },
+      {
+        "filename": "2007.11354.json",
+        "pos": 7,
+        "id_table": "S3.T11",
+        "relevance": true,
+        "relevance_score": 3
+      },
+      {
+        "filename": "2404.05049.json",
+        "pos": 8,
+        "id_table": "S4.T1",
+        "relevance": false,
+        "relevance_score": 2
+      },
+      {
+        "filename": "2409.10527v1.json",
+        "pos": 9,
+        "id_table": "A1.T8",
+        "relevance": false,
+        "relevance_score": 2
+      },
+      {
+        "filename": "2406.12658.json",
+        "pos": 10,
+        "id_table": "A3.T9.st2",
+        "relevance": false,
+        "relevance_score": 2
+      }
+    ]
+  },
+  "q1732803567066": {
+    "query": "Ablation study using different components as inputs. The 3D pose, in general, provides higher accuracy for genre recognition than 2D pose. Combination of the two, 2D and 3D level estimates, achieves better performance than either alone.",
+    "time(ms)": 84,
+    "result": [
+      {
+        "filename": "arXiv_2109.09166.json",
+        "pos": 1,
+        "id_table": "id_table_6",
+        "relevance": true,
+        "relevance_score": 4
+      },
+      {
+        "filename": "arXiv_2205.00748.json",
+        "pos": 2,
+        "id_table": "id_table_1",
+        "relevance": false,
+        "relevance_score": 2
+      },
+      {
+        "filename": "arXiv_2009.04930.json",
+        "pos": 3,
+        "id_table": "id_table_5",
+        "relevance": false,
+        "relevance_score": 2
+      },
+      {
+        "filename": "2404.07989.json",
+        "pos": 4,
+        "id_table": "S4.T5",
+        "relevance": false,
+        "relevance_score": 2
+      },
+      {
+        "filename": "arXiv_2110.09554.json",
+        "pos": 5,
+        "id_table": "id_table_4",
+        "relevance": false,
+        "relevance_score": 2
+      },
+      {
+        "filename": "2404.07989.json",
+        "pos": 6,
+        "id_table": "S4.T3",
+        "relevance": false,
+        "relevance_score": 1
+      },
+      {
+        "filename": "arXiv_2109.09166.json",
+        "pos": 7,
+        "id_table": "id_table_5",
+        "relevance": false,
+        "relevance_score": 2
+      },
+      {
+        "filename": "arXiv_2109.00326.json",
+        "pos": 8,
+        "id_table": "id_table_1",
+        "relevance": false,
+        "relevance_score": 2
+      },
+      {
+        "filename": "2410.05905.json",
+        "pos": 9,
+        "id_table": "S5.T4.6.2",
+        "relevance": false,
+        "relevance_score": 2
+      },
+      {
+        "filename": "arXiv_2011.01519.json",
+        "pos": 10,
+        "id_table": "id_table_10",
+        "relevance": false,
+        "relevance_score": 2
+      }
+    ]
+  },
+  "q1732803574472": {
+    "query": "NLP Tasks, Explanation, NLP Techniques, explanations",
+    "time(ms)": 44,
+    "result": [
+      {
+        "filename": "2204.04282v1.json",
+        "pos": 1,
+        "id_table": "id_table_3",
+        "relevance": true,
+        "relevance_score": 4
+      },
+      {
+        "filename": "2204.04282v1.json",
+        "pos": 2,
+        "id_table": "id_table_4",
+        "relevance": true,
+        "relevance_score": 3
+      },
+      {
+        "filename": "2406.09264v3.json",
+        "pos": 3,
+        "id_table": "S5.SS1.tab1",
+        "relevance": false,
+        "relevance_score": 3
+      },
+      {
+        "filename": "2204.04282v1.json",
+        "pos": 4,
+        "id_table": "id_table_1",
+        "relevance": true,
+        "relevance_score": 4
+      },
+      {
+        "filename": "2204.04282v1.json",
+        "pos": 5,
+        "id_table": "id_table_2",
+        "relevance": true,
+        "relevance_score": 3
+      },
+      {
+        "filename": "2407.12357v1.json",
+        "pos": 6,
+        "id_table": "S3.T1",
+        "relevance": false,
+        "relevance_score": 2
+      },
+      {
+        "filename": "2408.06276v2.json",
+        "pos": 7,
+        "id_table": "S1.T1",
+        "relevance": true,
+        "relevance_score": 3
+      },
+      {
+        "filename": "2407.19937v2.json",
+        "pos": 8,
+        "id_table": "Sx6.T6",
+        "relevance": false,
+        "relevance_score": 2
+      },
+      {
+        "filename": "1809.02805v2.json",
+        "pos": 9,
+        "id_table": "S3.T1",
+        "relevance": false,
+        "relevance_score": 1
+      },
+      {
+        "filename": "2407.00943.json",
+        "pos": 10,
+        "id_table": "S5.T2",
+        "relevance": false,
+        "relevance_score": 2
+      }
+    ]
+  },
+  "q1732803578191": {
+    "query": "Task , Image, Classification, , Object, Detection, Instance, Segmentation, Semantic, Segmentation",
+    "time(ms)": 58,
+    "result": [
+      {
+        "filename": "2407.12449.json",
+        "pos": 1,
+        "id_table": "S4.T1",
+        "relevance": false,
+        "relevance_score": 3
+      },
+      {
+        "filename": "2409.17093.json",
+        "pos": 2,
+        "id_table": "Sx4.T1.1.1",
+        "relevance": true,
+        "relevance_score": 3
+      },
+      {
+        "filename": "2409.20287.json",
+        "pos": 3,
+        "id_table": "S2.T1.24",
+        "relevance": true,
+        "relevance_score": 3
+      },
+      {
+        "filename": "2410.04172.json",
+        "pos": 4,
+        "id_table": "S3.T2.3.1",
+        "relevance": false,
+        "relevance_score": 3
+      },
+      {
+        "filename": "2409.10272.json",
+        "pos": 5,
+        "id_table": "S4.T2.1",
+        "relevance": true,
+        "relevance_score": 3
+      },
+      {
+        "filename": "2409.09502.json",
+        "pos": 6,
+        "id_table": "S4.T2.11",
+        "relevance": false,
+        "relevance_score": 3
+      },
+      {
+        "filename": "2112.10775.json",
+        "pos": 7,
+        "id_table": "A3.T5",
+        "relevance": false,
+        "relevance_score": 2
+      },
+      {
+        "filename": "2410.04172.json",
+        "pos": 8,
+        "id_table": "S2.T1.3.1",
+        "relevance": false,
+        "relevance_score": 2
+      },
+      {
+        "filename": "2409.09360.json",
+        "pos": 9,
+        "id_table": "S5.T3.2.2",
+        "relevance": false,
+        "relevance_score": 3
+      },
+      {
+        "filename": "2112.10775.json",
+        "pos": 10,
+        "id_table": "A3.T6",
+        "relevance": false,
+        "relevance_score": 2
+      }
+    ]
+  }
+}

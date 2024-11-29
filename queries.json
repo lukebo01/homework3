@@ -1,0 +1,272 @@
+{
+  "q1732655763739" : {
+    "query" : "RNN",
+    "time(ms)" : 2168,
+    "result" : [ {
+      "filename" : "2403.01580.json",
+      "pos" : 1,
+      "id_table" : "Ch5.T5.3"
+    }, {
+      "filename" : "2401.14953v1.json",
+      "pos" : 2,
+      "id_table" : "A4.T1"
+    }, {
+      "filename" : "2405.12983.json",
+      "pos" : 3,
+      "id_table" : "S3.T5"
+    }, {
+      "filename" : "2405.06747v1.json",
+      "pos" : 4,
+      "id_table" : "S4.T1"
+    }, {
+      "filename" : "2405.06747v1.json",
+      "pos" : 5,
+      "id_table" : "S5.T2"
+    }, {
+      "filename" : "2405.06747v1.json",
+      "pos" : 6,
+      "id_table" : "S6.T3"
+    }, {
+      "filename" : "2409.05148.json",
+      "pos" : 7,
+      "id_table" : "S2.T1"
+    }, {
+      "filename" : "2104.07468.json",
+      "pos" : 8,
+      "id_table" : "S7.T5"
+    }, {
+      "filename" : "1911.03362.json",
+      "pos" : 9,
+      "id_table" : "S9.T6"
+    }, {
+      "filename" : "1911.03362.json",
+      "pos" : 10,
+      "id_table" : "S9.T7"
+    } ]
+  },
+  "q1732866853950" : {
+    "query" : "Task, Named Entity Recognition (NCBI Disease), prompt",
+    "time(ms)" : 2147,
+    "result" : [ {
+      "filename" : "2303.04360.json",
+      "pos" : 1,
+      "id_table" : "S3.T1"
+    }, {
+      "filename" : "2303.04360.json",
+      "pos" : 2,
+      "id_table" : "S4.T6"
+    }, {
+      "filename" : "2303.04360.json",
+      "pos" : 3,
+      "id_table" : "S4.T4"
+    }, {
+      "filename" : "2310.13362.json",
+      "pos" : 4,
+      "id_table" : "A1.T8.1"
+    }, {
+      "filename" : "2407.16030v1.json",
+      "pos" : 5,
+      "id_table" : "id_table_2"
+    }, {
+      "filename" : "2303.04360.json",
+      "pos" : 6,
+      "id_table" : "S5.T7"
+    }, {
+      "filename" : "2408.04641v1.json",
+      "pos" : 7,
+      "id_table" : "S5.T5"
+    }, {
+      "filename" : "2407.15154.json",
+      "pos" : 8,
+      "id_table" : "S2.T1.1"
+    }, {
+      "filename" : "2404.18664v1.json",
+      "pos" : 9,
+      "id_table" : "S7.T3"
+    }, {
+      "filename" : "2405.08295.json",
+      "pos" : 10,
+      "id_table" : "S4.T8"
+    } ]
+  },
+  "q1732867004268" : {
+    "query" : "Task , Image, Classification, , Object, Detection, Instance, Segmentation, Semantic, Segmentation",
+    "time(ms)" : 59,
+    "result" : [ {
+      "filename" : "2407.12449.json",
+      "pos" : 1,
+      "id_table" : "S4.T1"
+    }, {
+      "filename" : "2409.17093.json",
+      "pos" : 2,
+      "id_table" : "Sx4.T1.1.1"
+    }, {
+      "filename" : "2409.20287.json",
+      "pos" : 3,
+      "id_table" : "S2.T1.24"
+    }, {
+      "filename" : "2410.04172.json",
+      "pos" : 4,
+      "id_table" : "S3.T2.3.1"
+    }, {
+      "filename" : "2409.10272.json",
+      "pos" : 5,
+      "id_table" : "S4.T2.1"
+    }, {
+      "filename" : "2409.09502.json",
+      "pos" : 6,
+      "id_table" : "S4.T2.11"
+    }, {
+      "filename" : "2112.10775.json",
+      "pos" : 7,
+      "id_table" : "A3.T5"
+    }, {
+      "filename" : "2410.04172.json",
+      "pos" : 8,
+      "id_table" : "S2.T1.3.1"
+    }, {
+      "filename" : "2409.09360.json",
+      "pos" : 9,
+      "id_table" : "S5.T3.2.2"
+    }, {
+      "filename" : "2112.10775.json",
+      "pos" : 10,
+      "id_table" : "A3.T6"
+    } ]
+  },
+  "q1732868802621" : {
+    "query" : "Combination of the two, 2D and 3D level estimates, achieves better performance than either alone.",
+    "time(ms)" : 36,
+    "result" : [ {
+      "filename" : "arXiv_2109.09166.json",
+      "pos" : 1,
+      "id_table" : "id_table_6"
+    }, {
+      "filename" : "2410.05905.json",
+      "pos" : 2,
+      "id_table" : "S5.T4.6.2"
+    }, {
+      "filename" : "arXiv_2205.00748.json",
+      "pos" : 3,
+      "id_table" : "id_table_1"
+    }, {
+      "filename" : "2404.07989.json",
+      "pos" : 4,
+      "id_table" : "S4.T5"
+    }, {
+      "filename" : "2109.01934v1.json",
+      "pos" : 5,
+      "id_table" : "S4.T1"
+    }, {
+      "filename" : "2403.03309.json",
+      "pos" : 6,
+      "id_table" : "S6.T1"
+    }, {
+      "filename" : "arXiv_2009.04930.json",
+      "pos" : 7,
+      "id_table" : "id_table_5"
+    }, {
+      "filename" : "2410.05905.json",
+      "pos" : 8,
+      "id_table" : "S5.T8.5.1"
+    }, {
+      "filename" : "2404.07989.json",
+      "pos" : 9,
+      "id_table" : "S4.T3"
+    }, {
+      "filename" : "arXiv_2011.01519.json",
+      "pos" : 10,
+      "id_table" : "id_table_10"
+    } ]
+  },
+  "q1732868851769" : {
+    "query" : "Ablation study using different components as inputs. The 3D pose, in general, provides higher accuracy for genre recognition than 2D pose. Combination of the two, 2D and 3D level estimates, achieves better performance than either alone.",
+    "time(ms)" : 60,
+    "result" : [ {
+      "filename" : "arXiv_2109.09166.json",
+      "pos" : 1,
+      "id_table" : "id_table_6"
+    }, {
+      "filename" : "arXiv_2205.00748.json",
+      "pos" : 2,
+      "id_table" : "id_table_1"
+    }, {
+      "filename" : "arXiv_2009.04930.json",
+      "pos" : 3,
+      "id_table" : "id_table_5"
+    }, {
+      "filename" : "2404.07989.json",
+      "pos" : 4,
+      "id_table" : "S4.T5"
+    }, {
+      "filename" : "arXiv_2110.09554.json",
+      "pos" : 5,
+      "id_table" : "id_table_4"
+    }, {
+      "filename" : "2404.07989.json",
+      "pos" : 6,
+      "id_table" : "S4.T3"
+    }, {
+      "filename" : "arXiv_2109.09166.json",
+      "pos" : 7,
+      "id_table" : "id_table_5"
+    }, {
+      "filename" : "arXiv_2109.00326.json",
+      "pos" : 8,
+      "id_table" : "id_table_1"
+    }, {
+      "filename" : "2410.05905.json",
+      "pos" : 9,
+      "id_table" : "S5.T4.6.2"
+    }, {
+      "filename" : "arXiv_2011.01519.json",
+      "pos" : 10,
+      "id_table" : "id_table_10"
+    } ]
+  },
+  "q1732868870818" : {
+    "query" : "Intrusion Types, percentage",
+    "time(ms)" : 10,
+    "result" : [ {
+      "filename" : "2410.07612v1.json",
+      "pos" : 1,
+      "id_table" : "S4.T9"
+    }, {
+      "filename" : "2410.07612v1.json",
+      "pos" : 2,
+      "id_table" : "S4.T6"
+    }, {
+      "filename" : "2410.07612v1.json",
+      "pos" : 3,
+      "id_table" : "S4.T7"
+    }, {
+      "filename" : "2410.07612v1.json",
+      "pos" : 4,
+      "id_table" : "S4.T8"
+    }, {
+      "filename" : "2410.07612v1.json",
+      "pos" : 5,
+      "id_table" : "S4.T4"
+    }, {
+      "filename" : "2410.07612v1.json",
+      "pos" : 6,
+      "id_table" : "S4.T5"
+    }, {
+      "filename" : "2007.11354.json",
+      "pos" : 7,
+      "id_table" : "S3.T11"
+    }, {
+      "filename" : "2404.05049.json",
+      "pos" : 8,
+      "id_table" : "S4.T1"
+    }, {
+      "filename" : "2409.10527v1.json",
+      "pos" : 9,
+      "id_table" : "A1.T8"
+    }, {
+      "filename" : "2406.12658.json",
+      "pos" : 10,
+      "id_table" : "A3.T9.st2"
+    } ]
+  }
+}
